@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Circular Std";
+  src: url('../assets/fonts/CircularStd-Regular.woff2') format("woff2"),
+       url('../assets/fonts/CircularStd-Regular.woff') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular Std";
+  src: url('../assets/fonts/CircularStd-Medium.woff2') format("woff2"),
+       url('../assets/fonts/CircularStd-Medium.woff') format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url('../assets/fonts/InstrumentSans-Regular.woff2') format("woff2"),
+       url('../assets/fonts/InstrumentSans-Regular.woff') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url('../assets/fonts/InstrumentSans-Medium.woff2') format("woff2"),
+       url('../assets/fonts/InstrumentSans-Medium.woff') format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url('../assets/fonts/InstrumentSans-Bold.woff2') format("woff2"),
+       url('../assets/fonts/InstrumentSans-Bold.woff') format("woff");
+  font-weight: bold;
+  font-style: normal;
+}

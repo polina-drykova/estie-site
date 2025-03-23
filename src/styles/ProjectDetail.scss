@@ -1,0 +1,49 @@
+.project-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 384px;
+  margin: auto;
+  margin-bottom: 400px;
+  &:last-child {
+    margin-bottom: 212px;
+  }
+  h3 {
+    margin-bottom: 8px !important;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+  }
+  p {
+    letter-spacing: normal;
+    width: 384px;
+  }
+  .project-content-list-wrapper {
+    display: grid;
+    grid-gap: 24px;
+    justify-items: center;
+  }
+  .item-wrapper {
+    width: 384px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .image-shadow {
+    position: absolute;
+    bottom: -21px;
+    right: -3px;
+    z-index: -1;
+  }
+  .flurry-msg {
+    margin-left: auto;
+    margin-top: 54px;
+  }
+  .item-last {
+    margin-bottom: 60px;
+  }
+}
+
+.project-cta {
+  margin-bottom: 26px !important;
+  display: flex;
+  justify-content: center;
+}

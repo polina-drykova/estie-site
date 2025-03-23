@@ -1,0 +1,38 @@
+// Colors
+$primary-color: black;
+$active-color: #0866FF;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+$text-color: #212529;
+$warning-color: #FF9500;
+
+// Spacing
+$padding-sm: 8px;
+$padding-md: 16px;
+$padding-lg: 24px;
+
+// Font Sizes
+$font-sm: 14px;
+$font-md: 16px;
+$font-lg: 20px;
+
+// Border Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+
+$shadow-1: 0px 3px 6px rgba(0, 0, 0, 0.10), // 10% opacity
+  0px 11px 11px rgba(0, 0, 0, 0.09), // 9% opacity
+  0px 25px 15px rgba(0, 0, 0, 0.05), // 5% opacity
+  0px 44px 18px rgba(0, 0, 0, 0.01), // 1% opacity
+  0px 69px 19px rgba(0, 0, 0, 0.00); // 0% opacity
+
+$shadow-2: -6px 34px 10px 0px color(display-p3 0 0 0 / 0),
+  -4px 22px 9px 0px color(display-p3 0 0 0 / 0.01),
+  -2px 12px 7px 0px color(display-p3 0 0 0 / 0.05),
+  -1px 5px 6px 0px color(display-p3 0 0 0 / 0.09),
+  0px 1px 3px 0px color(display-p3 0 0 0 / 0.10);
+
+.mb-8 {
+  margin-bottom: 8px !important;
+} 

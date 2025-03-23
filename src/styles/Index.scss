@@ -1,0 +1,117 @@
+@use 'variables' as *;
+
+.layout-content {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+  position: relative;
+  overflow-x: clip;
+  
+  @media (min-width: 768px) {
+    padding: 0 3rem;
+  }
+  
+  &__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  &__content {
+    max-width: 36rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 44px;
+    
+    // @media (min-width: 768px) {
+    //   margin-top: 8rem;
+    // }
+  }
+  
+  &__headline {
+    // font-size: 2.25rem;
+    // font-family: 'Playfair Display', serif;
+    font-weight: 500 !important;
+    line-height: 29px;
+    margin-bottom: 16px;
+    max-width: 425px;
+    margin-left: auto;
+    margin-right: auto;
+    // @media (min-width: 768px) {
+    //   font-size: 3rem;
+    // }
+    
+    // @media (min-width: 1024px) {
+    //   font-size: 3.75rem;
+    // }
+    // &-min {
+    //   margin-bottom: 8px;
+    // }
+  }
+  
+  &__intro {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Button Styles (same class name as original)
+.layout-content__cta {
+  font-family: 'Circular Std', sans-serif;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 45px;
+  height: 34px;
+  width: 124px;
+  line-height: 1;
+  box-shadow: $shadow-1;
+  &.active {
+    background-color: $active-color;
+  }
+}
+
+// Ensures correct positioning
+.cta-container {
+  position: relative;
+  display: inline-block;
+}
+
+.landing-image {
+  max-width: 1168px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 160px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+.showcase-image-wrapper {
+  display: flex;
+  justify-content: center;
+  .showcase-image {
+    max-width: 972px;
+    margin-top: 29px;
+    background-size: cover;
+    background-position: center;
+  }
+  .showcase-image-flurry {
+    max-width: 1018px;
+    margin-top: 55px;
+    margin-bottom: 265px;
+    background-size: cover;
+    background-position: center;
+  }
+}

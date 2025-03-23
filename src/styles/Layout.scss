@@ -1,0 +1,55 @@
+@use 'variables' as *;
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    padding-top: 20px;
+    
+    @media (min-width: 768px) {
+      padding-top: 40px;
+    }
+    
+    &-container {
+      max-width: 80rem;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    &-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: solid 4px $primary-color;
+    }
+  }
+
+  &__main {
+    flex: 1;
+  }
+  
+  &__email-button {
+    position: fixed;
+    bottom: 26px;
+    right: 16px;
+    z-index: 50;
+    width: 34px;
+    height: 34px;
+    border-radius: 9999px;
+    background-color: $primary-color;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadow-2;
+  }
+}
