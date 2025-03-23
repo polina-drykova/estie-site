@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import LazyImage from '../components/LazyImage';
-import Shadow from '../assets/images/shadow.svg';
+import Shadow from '@/assets/images/shadow.svg';
 
 interface projectsContentProps {
   header?: string;

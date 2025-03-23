@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectContent from "../components/ProjectContent";
 import LazyImage from '../components/LazyImage';
-import FlurryLanding from '../assets/images/flurry-landing.svg';
+import FlurryLanding from '@/assets/images/flurry-landing.svg';
 
 interface ProjectDetail {
   title: string;

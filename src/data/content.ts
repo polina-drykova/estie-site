@@ -1,5 +1,5 @@
-import Flurry1 from '../assets/images/flurry-1.svg';
-import Flurry2 from '../assets/images/flurry-2.svg';
+import Flurry1 from '@/assets/images/flurry-1.svg';
+import Flurry2 from '@/assets/images/flurry-2.svg';
 
 export const siteConfig = {
   name: "Estie",

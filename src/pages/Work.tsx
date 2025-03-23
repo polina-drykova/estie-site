@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { projectsContent } from "../data/content";
-import Showcase from '../assets/images/showcase.svg';
+import Showcase from '@/assets/images/showcase.svg';
 import LazyImage from '../components/LazyImage';
 import { Link } from "react-router-dom";
 import '../styles/Work.scss';

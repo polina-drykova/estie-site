@@ -19,7 +19,7 @@
   }
   
   &__content {
-    max-width: 36rem;
+    max-width: 448px;
     margin: 0 auto;
     text-align: center;
     margin-top: 44px;
@@ -87,11 +87,11 @@
 }
 
 .landing-image {
-  max-width: 1168px;
+  max-width: 942px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: 160px;
+  margin-top: 186px;
   transform: translate(-50%, -50%);
   z-index: -1;
   background-size: cover;
