@@ -5,13 +5,14 @@ import '../styles/PasswordTooltip.scss';
 interface PasswordTooltipProps {
   onSuccess: () => void;
   onCancel: () => void;
-  tooltipRef: React.RefObject<HTMLDivElement>; // ✅ Receives ref from Index.tsx
+  tooltipRef: React.RefObject<HTMLDivElement>;
 }
 
 const PasswordTooltip: React.FC<PasswordTooltipProps> = ({ onSuccess, onCancel, tooltipRef }) => {
   const [digits, setDigits] = useState<string[]>(["", "", "", ""]);
   const [hasError, setHasError] = useState(false);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+  const [isValid, setIsValid] = useState(false);
 
   // ✅ Auto-Focus the first input when the tooltip is opened
   useEffect(() => {
@@ -55,18 +56,18 @@ const PasswordTooltip: React.FC<PasswordTooltipProps> = ({ onSuccess, onCancel, 
     // ✅ Check password when all 4 digits are entered
     if (index === 3 && newDigits.every((d) => d !== "")) {
       if (newDigits.join("") === siteConfig.password) {
-        onSuccess();
+        // onSuccess();
+        setHasError(false);
+        setIsValid(true);
       } else {
         setHasError(true);
 
-        // ✅ Apply shake effect to `.password-tooltip-container`
         if (tooltipRef.current) {
-          tooltipRef.current.classList.remove("shake"); // Remove before re-adding
-          void tooltipRef.current.offsetWidth; // ✅ Force reflow (important fix)
+          tooltipRef.current.classList.remove("shake");
+          void tooltipRef.current.offsetWidth;
           tooltipRef.current.classList.add("shake");
         }
 
-        // ✅ Remove shake effect after animation completes (500ms)
         setTimeout(() => {
           tooltipRef.current?.classList.remove("shake");
         }, 500);
@@ -85,9 +86,26 @@ const PasswordTooltip: React.FC<PasswordTooltipProps> = ({ onSuccess, onCancel, 
         newDigits[index - 1] = ""; // Clear previous input if empty
         inputRefs.current[index - 1]?.focus();
       }
-
+      setIsValid(false);
       setHasError(false);
       setDigits(newDigits);
+    }
+
+    if (e.key === "Enter") {
+      const fullInput = digits.join("");
+      const isComplete = digits.every((d) => d !== "");
+  
+      if (isComplete && fullInput === siteConfig.password) {
+        onSuccess();
+      } else if (!isValid) {
+        tooltipRef.current?.classList.remove("shake");
+        void tooltipRef.current?.offsetWidth;
+        tooltipRef.current?.classList.add("shake");
+  
+        setTimeout(() => {
+          tooltipRef.current?.classList.remove("shake");
+        }, 500);
+      }
     }
   };
 
@@ -106,7 +124,10 @@ const PasswordTooltip: React.FC<PasswordTooltipProps> = ({ onSuccess, onCancel, 
             value={digit}
             onChange={(e) => handleDigitChange(index, e.target.value)}
             onKeyDown={(e) => handleKeyDown(index, e)} // ✅ Backspace handling is still here
-            className={`password-tooltip__input ${hasError ? "error" : ""} ${digit ? "filled" : ""}`}
+            className={`password-tooltip__input 
+              ${hasError ? "error" : ""}
+              ${isValid ? "success" : ""}
+              ${digit ? "filled" : ""}`}
             maxLength={1}
             inputMode="numeric"
             autoComplete="off"
