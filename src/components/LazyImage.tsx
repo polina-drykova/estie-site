@@ -15,7 +15,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt = 'Image', className }) 
         src={src}
         alt={alt}
         className={className}
-        loading='lazy'
+        // loading='lazy'
         onLoad={(e) => {
           const target = e.target as HTMLImageElement;
           if (target.complete) {
