@@ -5,7 +5,7 @@ import { homeContent } from "../data/content";
 import CustomTooltip from "../components/CustomTooltip";
 import PasswordTooltip from "../components/PasswordTooltip";
 import CTAButton from "../components/CTAButton";
-import Landing from '@/assets/images/landing.svg';
+import Landing from '/landing.svg';
 import LazyImage from '../components/LazyImage';
 import '../styles/Index.scss';
 
