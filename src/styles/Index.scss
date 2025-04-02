@@ -96,6 +96,22 @@
   z-index: -1;
   background-size: cover;
   background-position: center;
+  // Mobile first: default styles for mobile
+
+  // Tablets (iPad portrait and up)
+  @media (min-width: 768px) {
+    // tablet & small desktop styles
+  }
+
+  // Small desktops
+  @media (min-width: 1024px) {
+    // medium screens (iPad landscape, laptops)
+  }
+
+  // Large desktops
+  @media (min-width: 1280px) {
+    // larger monitors
+  }
 }
 
 .showcase-image-wrapper {

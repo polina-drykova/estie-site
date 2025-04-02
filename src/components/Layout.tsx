@@ -5,6 +5,7 @@ import { siteConfig } from "../data/content";
 import logo from '@/assets/images/envelope.svg';
 import LazyImage from './LazyImage';
 import '../styles/Layout.scss';
+import Floater from "./Floater";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,10 +14,9 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="layout">
+      <Floater />
       <header className="layout__header">
-        <div className="layout__header-container">
-          <div className="layout__header-dot" />
-        </div>
+        <div className="layout__header-container" />
       </header>
 
       <main className="layout__main">

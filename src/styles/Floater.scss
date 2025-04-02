@@ -1,0 +1,25 @@
+.floater {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  width: 21px;
+  height: 21px;
+  outline: 4px solid black;
+  border-radius: 50%;
+  z-index: 20;
+  background: transparent;
+  transition: height 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  // transition: height 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  will-change: transform, height;
+  backface-visibility: hidden;
+  transform: translateX(-50%) translateZ(0);
+}
+
+.stretch {
+  height: 42px;
+}
+
+.release {
+  // transition: height 0.1s ease-out;
+  // height: 21px;
+}
