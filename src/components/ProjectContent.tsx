@@ -1,41 +1,57 @@
-import React, { useState } from 'react';
-import LazyImage from '../components/LazyImage';
-import Shadow from '@/assets/images/shadow.svg';
+import React from 'react';
+import HtmlContentBlock from './project-content-utils/HtmlContentBlock';
+import ImageBlock from './project-content-utils/ImageBlock';
+import VideoBlock from './project-content-utils/VideoBlock';
 
 interface projectsContentProps {
   header?: string;
+  className?: string;
   content: Array<
-    string | {
-      image: string;
-      shadow?: boolean;
-      class: string;
-    }
+    | string
+    | {
+        image?: string | string[];
+        video?: string | string[];
+        poster?: string;
+        shadow?: boolean | boolean[];
+        subtitle?: string | string[];
+        description?: string | string[];
+        subtitleClass?: string;
+        class: string;
+      }
   >;
 }
-const HtmlContent = ({ html }: { html: string }) => {
-  return (
-    <p dangerouslySetInnerHTML={{ __html: html }} />
-  );
-};
 
-const projectsContent: React.FC<projectsContentProps> = ({ header, content }) => {
-
+const ProjectsContent: React.FC<projectsContentProps> = ({ header, content, className }) => {
   return (
-    <div className='project-content'>
+    <div className="project-content">
       {header && <h3>{header}</h3>}
-      {content && <div className='project-content-list-wrapper'>
+      {content && <div className="project-content-list-wrapper">
         {content.map((item, index) => (
           <div key={index} className="item-wrapper">
-            {typeof item === "string" ? (
-                <HtmlContent html={item} />
-              ) : (
-                <>
-                  <LazyImage src={item.image} alt="Project Image" className={item.class || ""} />
-                  {item.shadow && (
-                    <LazyImage src={Shadow} alt="Shadow" className="image-shadow" />
-                  )}
-                </>
-              )}
+            {typeof item === 'string' ? (
+              <HtmlContentBlock html={item} />
+            ) : item.video ? (
+              <VideoBlock
+                videos={item.video}
+                poster={item.poster}
+                shadow={item.shadow}
+                subtitle={item.subtitle}
+                description={item.description}
+                subtitleClass={item.subtitleClass}
+                className={item.class}
+                wrapperClassName={className}
+              />
+            ) : item.image ? (
+              <ImageBlock
+                images={item.image}
+                shadow={item.shadow}
+                subtitle={item.subtitle}
+                description={item.description}
+                subtitleClass={item.subtitleClass}
+                className={item.class}
+                wrapperClassName={className}
+              />
+            ) : null}
           </div>
         ))}
       </div>}
@@ -43,4 +59,4 @@ const projectsContent: React.FC<projectsContentProps> = ({ header, content }) =>
   );
 };
 
-export default projectsContent;
+export default ProjectsContent;

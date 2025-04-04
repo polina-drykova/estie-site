@@ -5,6 +5,7 @@ import FlurryLanding from '/flurry-landing.svg';
 
 interface ProjectDetail {
   title: string;
+  className: string;
   content: string[];
 }
 
@@ -30,7 +31,7 @@ const ProjectDetailFlurry: React.FC<ProjectDetailFlurryProps> = ({ project }) =>
         </div>
         <div>
           {project.details.map((detail, index) => (
-            <ProjectContent header={detail.title} content={detail.content} key={index} />
+            <ProjectContent header={detail.title} content={detail.content} className={detail.className} key={index} />
           ))}
         </div>
       </div>
