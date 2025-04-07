@@ -4,9 +4,16 @@ import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { projectsContent } from "../data/content";
 import Showcase from '/showcase.svg';
+import ShowcaseMobile from '/showcase-mobile-tablet.svg';
 import LazyImage from '../components/LazyImage';
 import { Link } from "react-router-dom";
 import '../styles/Work.scss';
+
+const ShowcaseSrc = {
+  desktop: Showcase,
+  tablet: ShowcaseMobile,
+  mobile: ShowcaseMobile,
+};
 
 const Work = () => {
   const navigate = useNavigate();
@@ -18,7 +25,7 @@ const Work = () => {
       navigate("/");
     }
   }, [navigate]);
-  
+
   return (
     <Layout>
       <div className="layout-content">
@@ -44,7 +51,7 @@ const Work = () => {
             ))}
           </div>
           <div className="showcase-image-wrapper">
-            <LazyImage src={Showcase} alt="Logo" className="showcase-image" />
+            <LazyImage src={ShowcaseSrc} alt="Logo" className="showcase-image" />
           </div>
         </div>
       </div>

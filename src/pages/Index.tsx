@@ -6,8 +6,15 @@ import CustomTooltip from "../components/CustomTooltip";
 import PasswordTooltip from "../components/PasswordTooltip";
 import CTAButton from "../components/CTAButton";
 import Landing from '/landing.svg';
+import LandingMobile from '/landing-mobile.svg';
 import LazyImage from '../components/LazyImage';
 import '../styles/Index.scss';
+
+const LandingSrc = {
+  desktop: Landing,
+  tablet: Landing,
+  mobile: LandingMobile,
+};
 
 const Index = () => {
   const [isPasswordTooltipOpen, setIsPasswordTooltipOpen] = useState(false);
@@ -46,11 +53,11 @@ const Index = () => {
   return (
     <Layout>
       <div className="layout-content">
-        <LazyImage src={Landing} alt="Logo" className="landing-image" />
+        <LazyImage src={LandingSrc} alt="Logo" className="landing-image" />
         <div className="layout-content__container">
           <div className="layout-content__content">
-            <h1 className="layout-content__headline">{homeContent.headline}</h1>
-            <p className="layout-content__intro">{homeContent.introduction}</p>
+            <h1 className="layout-content__headline landing-content">{homeContent.headline}</h1>
+            <p className="layout-content__intro landing-content">{homeContent.introduction}</p>
 
             <div className="cta-container">
               <CustomTooltip open={isPasswordTooltipOpen} ref={tooltipRef}>

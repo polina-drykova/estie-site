@@ -1,30 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-interface LazyImageProps {
-  src: string;
-  alt?: string;
+type LazyImageProps = {
+  src: string | { desktop: string; tablet: string; mobile: string };
+  alt: string;
   className?: string;
-}
+};
 
-const LazyImage: React.FC<LazyImageProps> = ({ src, alt = 'Image', className }) => {
-  // const [error, setError] = useState(false);
+const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className = '' }) => {
+  if (typeof src === 'string') {
+    // normal image
+    return (
+      <img src={src} alt={alt} className={className} loading="lazy" />
+    );
+  }
 
+  // responsive image
   return (
-    // <div className="image-reveal">
-      <img
-        src={src}
-        alt={alt}
-        className={className}
-        // loading='lazy'
-        onLoad={(e) => {
-          const target = e.target as HTMLImageElement;
-          if (target.complete) {
-            target.parentElement?.classList.add('revealed');
-          }
-        }}
-        // onError={() => setError(true)}
-      />
-    // </div>
+    <picture className={className}>
+      <source media="(min-width: 1024px)" srcSet={src.desktop} />
+      <source media="(min-width: 768px)" srcSet={src.tablet} />
+      <img src={src.mobile} alt={alt} loading="lazy" />
+    </picture>
   );
 };
 

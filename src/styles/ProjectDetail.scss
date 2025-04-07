@@ -1,9 +1,15 @@
 .project-content {
   display: flex;
   flex-direction: column;
-  max-width: 384px;
+  max-width: 287px;
   margin: auto;
   margin-bottom: 400px;
+  @media (min-width: 768px) {
+    width: 328px;
+  }
+  @media (min-width: 1024px) {
+    width: 384px;
+  }
   &:last-child {
     margin-bottom: 212px;
   }
@@ -14,7 +20,13 @@
   }
   p {
     letter-spacing: normal;
-    width: 384px;
+    max-width: 287px;
+    @media (min-width: 768px) {
+      width: 328px;
+    }
+    @media (min-width: 1024px) {
+      width: 384px;
+    }
   }
   .project-content-list-wrapper {
     display: grid;
@@ -37,10 +49,16 @@
     }
   }
   .item-wrapper {
-    width: 384px;
+    max-width: 287px;
     position: relative;
     display: flex;
     justify-content: center;
+    @media (min-width: 768px) {
+      width: 328px;
+    }
+    @media (min-width: 1024px) {
+      width: 384px;
+    }
   }
   .image-shadow,
   .image-shadows {
@@ -62,7 +80,20 @@
     margin-bottom: 60px;
   }
   .video-large {
-    width: 1217px;
+    width: 100vw;
+    border-radius: 0;
+    padding: 318px 0;
+    background: black;
+    @media (min-width: 768px) {
+      // width: 100vw;
+      // border-radius: 0;
+      padding: 0;
+      background: none;
+    }
+    @media (min-width: 1024px) {
+      width: 1217px;
+      border-radius: 30px;
+    }
   }
   .video-medium {
     width: 700px;

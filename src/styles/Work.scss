@@ -49,10 +49,20 @@
 
 .projects-links-wrapper {
   display: grid;
-  gap: 72px;
+  gap: 4px;
   justify-content: center;
-  grid-template-columns: repeat(2, 243px);
+  grid-template-columns: repeat(2, 50vw);
   text-align: center;
+  margin-top: 32px;
+  @media (min-width: 768px) {
+    gap: 100px;
+    margin-top: 36px;
+    grid-template-columns: repeat(2, 243px);
+  }
+  @media (min-width: 1024px) {
+    gap: 72px;
+    margin-top: 34px;
+  }
 }
 .flurry-dot {
   width: 6px;
