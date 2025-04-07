@@ -21,6 +21,21 @@
     grid-gap: 24px;
     justify-items: center;
   }
+  .project-content-list-wrapper.odd {
+    .image-block-group,
+    .video-block-group,
+    .collage-grid {
+      margin-top: 16px;
+    }
+  }
+  
+  .project-content-list-wrapper.even {
+    .image-block-group,
+    .video-block-group,
+    .collage-grid {
+      margin-top: 24px;
+    }
+  }
   .item-wrapper {
     width: 384px;
     position: relative;

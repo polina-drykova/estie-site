@@ -1,0 +1,55 @@
+.collage-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-left: 100px;
+}
+
+/* Column 0 (2 rows) */
+.collage-column-0 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Column 1 (3 rows) */
+.collage-column-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Rows */
+.collage-row {
+  display: flex;
+  gap: 20px;
+}
+
+.collage-row-0 {
+  align-items: flex-end; /* bottom aligned */
+}
+
+.collage-row-1 {
+  align-items: flex-start; /* bottom aligned */
+}
+
+.collage-row-2 {
+  align-items: flex-end; /* normal aligned */
+}
+
+/* Common item style */
+.collage-item img,
+.collage-item video {
+  object-fit: cover;
+  display: block;
+}
+
+.collage-column-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .collage-row-1 {
+    align-items: flex-end; /* bottom aligned */
+  }
+}
