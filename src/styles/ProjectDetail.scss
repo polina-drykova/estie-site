@@ -183,4 +183,14 @@
 
 .group-gap-20 {
   gap: 20px;
+  @media (max-width: 768px) {
+    margin-left: 10px;
+    gap: 16px;
+  }
+}
+.video-list.autoplay-video {
+  @media (max-width: 768px) {
+    width: 286px;
+    min-width: 286px;
+  }
 }

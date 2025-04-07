@@ -6,6 +6,12 @@
   margin-left: 100px;
   @media (max-width: 768px) {
     flex-direction: column;
+    margin-left: 0;
+    img, video, .collage-item, .playing {
+      min-width: 287px;
+      max-width: 287px;
+      width: 287px;
+    }
   }
 }
 

@@ -58,7 +58,7 @@ export const flurryMediaContent = [
     shadow: true,
     subtitle: ["Profile", "Feedback guide", "Feed", "Composer", "Comments"],
     subtitleClass: "medium",
-    class: "gap-20",
+    class: "video-list",
   },
   { image: flurry5, class: "flurry-msg" },
   { image: {
@@ -71,18 +71,33 @@ export const flurryMediaContent = [
   { image: [flurry7, flurry8, flurry9, flurry10], shadow: true },
 ];
 
-export const flurryCollageContent = [
-  [
-    { type: 'image', src: flurryCollage1 },
-    { type: 'image', src: flurryCollage2 },
-    // { type: 'video', src: flurryCollage3, poster: '/posters/left-3.jpg' },
-    { type: 'video', src: flurryCollage3 },
-    { type: 'image', src: flurryCollage4 },
+export const flurryCollageContent = {
+  collage: [
+    [
+      { type: 'image', src: flurryCollage1 },
+      { type: 'image', src: flurryCollage2 },
+      // { type: 'video', src: flurryCollage3, poster: '/posters/left-3.jpg' },
+      { type: 'video', src: flurryCollage3 },
+      { type: 'image', src: flurryCollage4 },
+    ],
+    [
+      { type: 'image', src: flurryCollage5 },
+      { type: 'video', src: flurryCollage6 },
+      { type: 'image', src: flurryCollage8 },
+      { type: 'image', src: flurryCollage7 },
+    ],
   ],
-  [
-    { type: 'image', src: flurryCollage5 },
-    { type: 'video', src: flurryCollage6 },
-    { type: 'image', src: flurryCollage8 },
-    { type: 'image', src: flurryCollage7 },
+};
+
+export const flurryCollageContentMobile = {
+  collage: [
+    [
+      { type: 'image', src: flurryCollage7 },
+      { type: 'image', src: flurryCollage2 },
+      { type: 'video', src: flurryCollage6 },
+      { type: 'image', src: flurryCollage5 },
+    ],
+    [],
+    [],
   ],
-];
+};

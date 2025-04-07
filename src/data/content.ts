@@ -1,12 +1,8 @@
-import flurry1 from '@/assets/images/flurry/flurry-1.svg';
-import flurry2 from '@/assets/images/flurry/flurry-2.svg';
-import flurry3 from '@/assets/images/flurry/flurry-3.svg';
-import flurry4 from '@/assets/images/flurry/flurry-4.svg';
-import flurry5 from '@/assets/images/flurry/flurry-5.svg';
-import flurry6 from '@/assets/images/flurry/flurry-6.svg';
-import flurryPromo from '@/assets/videos/flurry_promo.mp4';
-import flurryV3 from '@/assets/videos/fluffy_3.0.mp4';
-import { flurryMediaContent, flurryCollageContent } from './flurryAssets';
+import {
+  flurryMediaContent,
+  flurryCollageContent,
+  flurryCollageContentMobile,
+} from './flurryAssets';
 
 export const siteConfig = {
   name: "Estie",
@@ -64,7 +60,10 @@ export const projectsContent = {
           content: [
             "A few weeks into working on 1.0, Xiao took a break from work and was able to go full-time on Flurry. He suggested diving straight into 2.0, and I agreed. In hindsight, we should’ve finished 1.0, tested it, and made decisions based on real results. But maybe the excitement of building something truly our own made us go all in.",
             "With 2.0, I wore more hats than ever before—even more than at Meta or in start-ups. I learnt Swift with ChatGPT to implement simple screens, fine-tuned icons, colours, typefaces, the app icon, and animations, and learnt how to commit code remotely from Xcode. I loved every part of it. The late nights, seeing it go from nothing to a finished product. It made me realise just how big the gap is between designing something in a tool like Figma and actually bringing it to life through programming. It made me understand my job as a designer better.",
-            { collage: flurryCollageContent },
+            {
+              mobile: flurryCollageContentMobile,
+              desktop: flurryCollageContent,
+            },
           ],
         },
         {
@@ -123,7 +122,6 @@ export const projectsContent = {
           content: [
             "This is where we wanted to take Flurry if we ever saw sufficient engagement. We realised AI could be a game-changer—not just for refining profiles but also for helping users start better conversations with matches. Flurry could have evolved into an app that improved both.",
             "It didn’t become a massive success, but we proved we could build, iterate, and adapt quickly—something we’d carry forward into whatever comes next.",
-            // array of images
             flurryMediaContent[9],
           ],
         },
