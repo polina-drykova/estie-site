@@ -4,6 +4,9 @@
   align-items: flex-start;
   gap: 20px;
   margin-left: 100px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 /* Column 0 (2 rows) */
@@ -24,6 +27,9 @@
 .collage-row {
   display: flex;
   gap: 20px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .collage-row-0 {

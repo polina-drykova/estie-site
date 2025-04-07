@@ -96,11 +96,21 @@
   .video-medium {
     width: 700px;
   }
+  .image-large {
+    &__ofset {
+      img {
+        position: relative;
+        left: 39%;
+        @media (min-width: 768px) {
+          left: unset;
+        }
+      }
+    }
+  }
   .image-large img {
-    width: 100vw;
-    border-radius: 0;
+    position: relative;
+    width: 210vw;
     @media (min-width: 768px) {
-      width: 950px;
       border-radius: 30px;
     }
     @media (min-width: 1024px) {

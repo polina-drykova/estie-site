@@ -1,4 +1,6 @@
 import flurry1 from '@/assets/images/flurry/flurry-1.svg';
+import flurry1Mobile from '@/assets/images/flurry/flurry-1-mobile.svg';
+import flurry1Tablet from '@/assets/images/flurry/flurry-1-tablet.svg';
 import flurry2 from '@/assets/images/flurry/flurry-2.svg';
 import flurry2Mobile from '@/assets/images/flurry/flurry-2-mobile.svg';
 import flurry3 from '@/assets/images/flurry/flurry-3.svg';
@@ -28,19 +30,27 @@ import flurryCollage7 from '@/assets/images/flurry-collage/flurry-collage-7.svg'
 import flurryCollage8 from '@/assets/images/flurry-collage/flurry-collage-8.svg';
 
 export const flurryMediaContent = [
-  { image: flurry1, class: "image-large" },
   { image: {
-      desktop: flurry2,
-      tablet: flurry2Mobile,
-      mobile: flurry2Mobile,
+      desktop: flurry1,
+      tablet: flurry1Tablet,
+      mobile: flurry1Mobile,
     },
-  class: "image-large" },
+    class: "image-large__ofset",
+  },
+  { image: {
+    desktop: flurry2,
+    tablet: flurry2Mobile,
+    mobile: flurry2Mobile,
+  },
+  class: "image-large",
+},
   { image: {
       desktop: flurry3,
       tablet: flurry3Mobile,
       mobile: flurry3Mobile,
     },
-    class: "image-large" },
+    class: "image-large",
+  },
   { image: flurry4, shadow: true },
   { video: flurryPromo, class: "video-large" },
   {
