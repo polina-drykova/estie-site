@@ -1,9 +1,12 @@
 import flurry1 from '@/assets/images/flurry/flurry-1.svg';
 import flurry2 from '@/assets/images/flurry/flurry-2.svg';
+import flurry2Mobile from '@/assets/images/flurry/flurry-2-mobile.svg';
 import flurry3 from '@/assets/images/flurry/flurry-3.svg';
+import flurry3Mobile from '@/assets/images/flurry/flurry-3-mobile.svg';
 import flurry4 from '@/assets/images/flurry/flurry-4.svg';
 import flurry5 from '@/assets/images/flurry/flurry-5.svg';
 import flurry6 from '@/assets/images/flurry/flurry-6.svg';
+import flurry6Mobile from '@/assets/images/flurry/flurry-6-mobile.svg';
 import flurryPromo from '@/assets/videos/flurry/flurry_promo.mp4';
 import flurryV3 from '@/assets/videos/flurry/fluffy_3.0.mp4';
 import flurry7 from '@/assets/images/flurry/flurry-7.svg';
@@ -26,8 +29,18 @@ import flurryCollage8 from '@/assets/images/flurry-collage/flurry-collage-8.svg'
 
 export const flurryMediaContent = [
   { image: flurry1, class: "image-large" },
-  { image: flurry2, class: "image-large" },
-  { image: flurry3, class: "image-large" },
+  { image: {
+      desktop: flurry2,
+      tablet: flurry2Mobile,
+      mobile: flurry2Mobile,
+    },
+  class: "image-large" },
+  { image: {
+      desktop: flurry3,
+      tablet: flurry3Mobile,
+      mobile: flurry3Mobile,
+    },
+    class: "image-large" },
   { image: flurry4, shadow: true },
   { video: flurryPromo, class: "video-large" },
   {
@@ -38,7 +51,12 @@ export const flurryMediaContent = [
     class: "gap-20",
   },
   { image: flurry5, class: "flurry-msg" },
-  { image: flurry6, class: "image-large" },
+  { image: {
+      desktop: flurry6,
+      tablet: flurry6Mobile,
+      mobile: flurry6Mobile,
+    },
+    class: "image-huge" },
   { video: flurryV3, class: "video-medium" },
   { image: [flurry7, flurry8, flurry9, flurry10], shadow: true },
 ];
