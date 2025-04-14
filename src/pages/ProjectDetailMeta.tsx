@@ -35,18 +35,16 @@ const ProjectDetailFlurry: React.FC<ProjectDetailFlurryProps> = ({ project }) =>
         </div>
         <div>
           {project.details.map((detail, index) => (
-            <React.Fragment key={index}>
-              <div className={`d-flex ${detail.customBackground ? 'custom-background-wrapper' : ''}`}>
-                {detail.customBackground && <div className="custom-background"></div>}
-                <ProjectContent
-                  title={detail.title}
-                  header={detail.header}
-                  content={detail.content}
-                  className={detail.className}
-                  index={index}
-                />
-              </div>
-            </React.Fragment>
+            <div className={`d-flex ${detail.customBackground ? 'custom-background-wrapper' : ''}`} key={index}>
+              {detail.customBackground && <div className="custom-background"></div>}
+              <ProjectContent
+                title={detail.title}
+                header={detail.header}
+                content={detail.content}
+                className={detail.className}
+                index={index}
+              />
+            </div>
           ))}
         </div>
       </div>

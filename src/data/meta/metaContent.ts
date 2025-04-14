@@ -19,13 +19,14 @@ export const metaContent = {
         // metaMediaContent[0] image-1
         "<h3 class='text-center mar-t-19'>Meta wins bid to <br> display ad in Candy Crush</h3>",
         // metaMediaContent[1] image-2
-        // metaMediaContent[2] video with description (video-1)
+        metaMediaContent[2], // video with description
       ],
     },
     {
       content: [
-        "<h3 class='text-center'>Old Experience</h3>"
-        // metaMediaContent[3] array of videos with descriptions (video-2, video-3)
+        "<h3 class='content-item-custom-header-2 text-center'>Old Experience</h3>",
+        metaMediaContent[3],
+        "<span class='text-center d-block'>Cluttered end card experience with low engagement</span>",
       ],
     },
     {
@@ -37,14 +38,16 @@ export const metaContent = {
     },
     {
       // image-3
-      title: "Building a Design System for AN",
+      // title: "Building a Design System for AN",
       content: [
+        metaMediaContent[4], // image-3
+        "<h3 class='content-item-custom-header'>Building a Design System for AN</h3>",
         "Audience Network isn’t technically inside Meta (Facebook, Instagram, WhatsApp), so it hasn’t followed a unified Facebook design system over the years. This led to a variety of ad formats that looked and behaved differently.",
         "Our first task was to create a design system based on FDS (Facebook Design System) and tailor it to the unique needs of Audience Network.",
         "",
         "<h3 class='content-item-custom-header'>A Versatile Card Design System</h3>",
         "We developed a flexible card system that adapts seamlessly across advertisers, goals, platforms, devices, and aspect ratios. Built with reusable components, it has become a core framework the entire team now relies on.",
-        // metaMediaContent[4] array of images with descriptions (14 images) image-4 - image-17
+        // metaMediaContent[5] array of images with descriptions (14 images) image-4 - image-17
       ],
       customBackground: true,
     },
@@ -55,33 +58,34 @@ export const metaContent = {
       title: "Card motion design.",
       content: [
         "With intentional motion design, the media card and its contents appear for a few seconds before collapsing, creating a smoother experience that enhances user engagement with the ad content.",
-        // metaMediaContent[5] array of videos, (video-4, video-5)
+        metaMediaContent[6], // array of videos
       ],
     },
     {
       title: "Ad Translation from Facebook to AN",
       content: [
         "See how ad translation has evolved from Facebook to Audience Network—comparing yesterday’s experience to today’s redesigned approach.",
-        // metaMediaContent[6] array of images with titles and descriptions (image-18, image-19, image-20)
+        metaMediaContent[7],
       ],
+      className: "group-gap-56", // TODO mobile?
     },
     {
       title: "Seamless Adaptation Across Ratios",
       content: [
         "With millions of videos from various advertisers daily, AN handles a wide range of ratios and sizes. Our design ensures ads adapt smoothly to all screen dimensions for a consistent experience.",
-        metaMediaContent[7], // TODO mobile
+        metaMediaContent[8], // TODO mobile
       ],
     },
     {
       content: [
-        metaMediaContent[8],
+        metaMediaContent[9],
       ],
     },
     {
       title: "Enhanced Endcard UX",
       content: [
         "For app ads, we designed a more interactive end card that leverages Play Store capabilities, incorporating media and app metadata for a richer experience.",
-        metaMediaContent[9],
+        metaMediaContent[10],
       ],
       className: "hidden-media-overflow",
     },
@@ -90,14 +94,14 @@ export const metaContent = {
       title: "Design System in Watch & Browse",
       content: [
         "We adapted our design system for other formats like Watch & Browse, ensuring it scales seamlessly across existing and future formats.",
-        // metaMediaContent[10] array of images with shadows (image-26, image-27, image-28, image-29)
+        // metaMediaContent[11] array of images with shadows (image-26, image-27, image-28, image-29)
       ],
     },
     {
       title: "Impact",
       content: [
         "By redesigning Audience Network’s ad formats and introducing a scalable design system, we aim to improve engagement, streamline ad experiences, and set a foundation for future innovation—not just at Meta, but across the ad industry. The anticipated impact of the redesign is a 5.1%–7.6% lift in AN Ads Score. Early tests show a +20.4% increase on the first cards, a +43.7% lift on Endcards, and a -51% reduction in reported ads.",
-        metaMediaContent[11],
+        metaMediaContent[12],
       ],
       className: "hidden-media-overflow",
     },
