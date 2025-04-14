@@ -4,6 +4,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { projectsContent } from "../data/content";
 import ProjectDetailFlurry from './ProjectDetailFlurry';
+import ProjectDetailMeta from './ProjectDetailMeta';
 import CTAButton from "../components/CTAButton";
 import { homeContent } from "../data/content";
 import '../styles/ProjectDetail.scss';
@@ -40,7 +41,7 @@ const ProjectDetailWrapper = () => {
   }
   const projectComponents = {
     "flurry-ai": ProjectDetailFlurry,
-    // "meta-audience-network": ProjectDetailMeta
+    "meta": ProjectDetailMeta,
   };
   const Component = projectComponents[slug];
 

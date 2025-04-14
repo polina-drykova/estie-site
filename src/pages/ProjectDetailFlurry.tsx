@@ -31,7 +31,7 @@ const ProjectDetailFlurry: React.FC<ProjectDetailFlurryProps> = ({ project }) =>
         </div>
         <div>
           {project.details.map((detail, index) => (
-            <ProjectContent header={detail.title} content={detail.content} className={detail.className} index={index} key={index} />
+            <ProjectContent title={detail.title} content={detail.content} className={detail.className} index={index} key={index} />
           ))}
         </div>
       </div>

@@ -30,19 +30,20 @@ type ContentItem =
     };
 
 interface ProjectsContentProps {
+  title?: string;
   header?: string;
   className?: string;
   content: ContentItem[];
   index?: number;
 }
 
-const ProjectsContent: React.FC<ProjectsContentProps> = ({ header, content, className, index }) => {
+const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, content, className, index }) => {
   const isMobile = useIsMobile(); // ✅ detect device
 
   return (
     <div className="project-content">
-      {header && <h3>{header}</h3>}
-
+      {header && <div className='heading'>{header}</div>}
+      {title && <h3>{title}</h3>}
       {content && (
         <div className={`project-content-list-wrapper ${index % 2 === 0 ? 'even' : 'odd'}`}>
           {content.map((item, itemIndex) => {
@@ -57,29 +58,29 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ header, content, clas
 
             return (
               <div key={itemIndex} className="item-wrapper">
-                {typeof finalItem === 'string' ? (
-                  <HtmlContentBlock html={finalItem} />
-                ) : finalItem.collage ? (
-                  <Collage columns={finalItem.collage} />
-                ) : finalItem.video ? (
+                {typeof safeItem === 'string' ? (
+                  <HtmlContentBlock html={safeItem} />
+                ) : safeItem.collage ? (
+                  <Collage columns={safeItem.collage} />
+                ) : safeItem.video ? (
                   <VideoBlock
-                    videos={finalItem.video}
-                    poster={finalItem.poster}
-                    shadow={finalItem.shadow}
-                    subtitle={finalItem.subtitle}
-                    description={finalItem.description}
-                    subtitleClass={finalItem.subtitleClass}
-                    className={finalItem.class}
+                    videos={safeItem.video}
+                    poster={safeItem.poster}
+                    shadow={safeItem.shadow}
+                    subtitle={safeItem.subtitle}
+                    description={safeItem.description}
+                    subtitleClass={safeItem.subtitleClass}
+                    className={safeItem.class}
                     wrapperClassName={className}
                   />
-                ) : finalItem.image ? (
+                ) : safeItem.image ? (
                   <ImageBlock
-                    images={finalItem.image}
-                    shadow={finalItem.shadow}
-                    subtitle={finalItem.subtitle}
-                    description={finalItem.description}
-                    subtitleClass={finalItem.subtitleClass}
-                    className={finalItem.class}
+                    images={safeItem.image}
+                    shadow={safeItem.shadow}
+                    subtitle={safeItem.subtitle}
+                    description={safeItem.description}
+                    subtitleClass={safeItem.subtitleClass}
+                    className={safeItem.class}
                     wrapperClassName={className}
                   />
                 ) : null}
