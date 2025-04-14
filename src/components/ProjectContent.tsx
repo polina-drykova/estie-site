@@ -13,6 +13,7 @@ interface BaseContentItem {
   subtitle?: string | string[];
   description?: string | string[];
   subtitleClass?: string;
+  descriptionClass?: string;
   class: string;
   collage?: {
     type: 'image' | 'video';
@@ -70,6 +71,7 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
                     subtitle={safeItem.subtitle}
                     description={safeItem.description}
                     subtitleClass={safeItem.subtitleClass}
+                    descriptionClass={safeItem.descriptionClass}
                     className={safeItem.class}
                     wrapperClassName={className}
                   />
@@ -80,6 +82,7 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
                     subtitle={safeItem.subtitle}
                     description={safeItem.description}
                     subtitleClass={safeItem.subtitleClass}
+                    descriptionClass={safeItem.descriptionClass}
                     className={safeItem.class}
                     wrapperClassName={className}
                   />

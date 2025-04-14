@@ -10,6 +10,7 @@ type Props = {
   subtitle?: string | string[];
   description?: string | string[];
   subtitleClass?: string;
+  descriptionClass?: string;
   className?: string;
   wrapperClassName?: string,
 };
@@ -23,6 +24,7 @@ const VideoBlock: React.FC<Props> = ({
   description,
   subtitleClass,
   wrapperClassName,
+  descriptionClass,
 }) => {
   const videoArray = Array.isArray(videos) ? videos : [videos];
   const shadowArray = Array.isArray(shadow) ? shadow : videoArray.map(() => shadow);
@@ -47,7 +49,7 @@ const VideoBlock: React.FC<Props> = ({
           </div>
 
           {descriptionArray[i] && (
-            <div className="media-description">{descriptionArray[i]}</div>
+            <div className={`media-description ${descriptionClass}`}>{descriptionArray[i]}</div>
           )}
         </div>
       ))}

@@ -8,11 +8,21 @@ type Props = {
   subtitle?: string | string[];
   description?: string | string[];
   subtitleClass?: string;
+  descriptionClass?: string;
   className?: string;
   wrapperClassName?: string;
 };
 
-const ImageBlock: React.FC<Props> = ({ images, shadow, className, subtitle, description, subtitleClass, wrapperClassName }) => {
+const ImageBlock: React.FC<Props> = ({
+  images,
+  shadow,
+  className,
+  subtitle,
+  description,
+  subtitleClass,
+  wrapperClassName,
+  descriptionClass,
+}) => {
   const imageArray = Array.isArray(images) ? images : [images];
   const shadowArray = Array.isArray(shadow) ? shadow : imageArray.map(() => shadow);
   const subtitleArray = Array.isArray(subtitle) ? subtitle : imageArray.map(() => subtitle);
@@ -36,7 +46,7 @@ const ImageBlock: React.FC<Props> = ({ images, shadow, className, subtitle, desc
           </div>
 
           {descriptionArray[i] && (
-            <div className="media-description">{descriptionArray[i]}</div>
+            <div className={`media-description ${descriptionClass}`}>{descriptionArray[i]}</div>
           )}
         </div>
       ))}
