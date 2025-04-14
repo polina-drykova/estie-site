@@ -69,7 +69,7 @@ export const metaContent = {
       title: "Seamless Adaptation Across Ratios",
       content: [
         "With millions of videos from various advertisers daily, AN handles a wide range of ratios and sizes. Our design ensures ads adapt smoothly to all screen dimensions for a consistent experience.",
-        metaMediaContent[7], // array of images with descriptions (image-21, image-22, image-23, image-24)
+        metaMediaContent[7], // TODO mobile
       ],
     },
     {

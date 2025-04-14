@@ -15,7 +15,11 @@
 // import meta8 from '@/assets/images/meta/meta-8.svg';
 // import meta9 from '@/assets/images/meta/meta-9.svg';
 // import meta10 from '@/assets/images/meta/meta-10.svg';
-import meta25 from '@/assets/images/meta/meta-25.svg';
+import meta21 from '@/assets/images/meta/image-21.svg';
+import meta22 from '@/assets/images/meta/image-22.svg';
+import meta23 from '@/assets/images/meta/image-23.svg';
+import meta24 from '@/assets/images/meta/image-24.svg';
+import meta25 from '@/assets/images/meta/image-25.svg';
 // import metaVid1 from '@/assets/videos/meta/meta-video-1.mp4';
 // import metaVid2 from '@/assets/videos/meta/meta-video-2.mp4';
 // import metaVid3 from '@/assets/videos/meta/meta-video-3.mp4';
@@ -25,21 +29,25 @@ import metaVid6 from '@/assets/videos/meta/meta-video-6.mp4';
 import metaVid7 from '@/assets/videos/meta/meta-video-7.mp4';
 
 export const metaMediaContent = [
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {
+  {}, // 0
+  {}, // 1
+  {}, // 2
+  {}, // 3
+  {}, // 4
+  {}, // 5
+  {}, // 6
+  { // 7
+    image: [meta21, meta22, meta23, meta24],
+    description: ["16:9 video ad", "1:1 video ad", "4:5 video ad", "9:16 video ad"],
+    shadow: true,
+  },
+  { // 8
     image: [meta25],
     description: ["Optimised for 4:5 and 9:16 ratios, with horizontal App Store screenshots."],
     descriptionClass: "offset-top__34",
     class: "standalone-image",
   },
-  { video: metaVid6, class: "meta-video-nudge-80" },
-  {},
-  { video: metaVid7, class: "meta-video-nudge-80" },
+  { video: metaVid6, class: "meta-video-nudge-80" }, // 9
+  {}, // 10
+  { video: metaVid7, class: "meta-video-nudge-80" }, // 11
 ];

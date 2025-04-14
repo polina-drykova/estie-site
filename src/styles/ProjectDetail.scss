@@ -137,6 +137,9 @@
 .image-block-group {
   display: flex;
   gap: 40px;
+  .media-description {
+    width: unset;
+  }
 }
 .image-block-item {
   position: relative;
