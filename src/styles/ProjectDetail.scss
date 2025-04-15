@@ -283,13 +283,16 @@
 }
 .custom-background {
   background: #E5E5EA;
-  left: -48px;
+  left: -24px;
   width: 100vw;
   position: absolute;
   right: 0;
   top: 0px;
   bottom: 0;
   z-index: -1;
+  @media (min-width: 768px) {
+    left: -48px;
+  }
 }
 h3.content-item-custom-header {
   margin-bottom: -16px !important;
@@ -304,9 +307,9 @@ h3.content-item-custom-header-2 {
   line-height: normal;
   letter-spacing: -0.72px;
   text-align: center;
-    @media (min-width: 1024px) {
-      text-align: left;
-    }
+  @media (min-width: 1024px) {
+    text-align: left;
+  }
 }
 
 .meta-video-nudge-80 {

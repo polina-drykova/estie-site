@@ -1,0 +1,41 @@
+.simple-image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 166px;
+}
+
+@media (max-width: 1023px) {
+  .simple-image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+    margin-top: 104px;
+  }
+}
+
+@media (max-width: 767px) {
+  .simple-image-grid {
+    margin-top: 143px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.simple-image-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.simple-image-grid-item.empty {
+  visibility: hidden;
+}
+.simple-image-grid-description {
+  font-family: 'Instrument Sans', sans-serif;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: normal;
+}

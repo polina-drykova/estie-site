@@ -40,14 +40,14 @@ export const metaContent = {
       // image-3
       // title: "Building a Design System for AN",
       content: [
-        metaMediaContent[4], // image-3
+        metaMediaContent[4],
         "<h3 class='content-item-custom-header'>Building a Design System for AN</h3>",
         "Audience Network isn’t technically inside Meta (Facebook, Instagram, WhatsApp), so it hasn’t followed a unified Facebook design system over the years. This led to a variety of ad formats that looked and behaved differently.",
         "Our first task was to create a design system based on FDS (Facebook Design System) and tailor it to the unique needs of Audience Network.",
         "",
         "<h3 class='content-item-custom-header'>A Versatile Card Design System</h3>",
         "We developed a flexible card system that adapts seamlessly across advertisers, goals, platforms, devices, and aspect ratios. Built with reusable components, it has become a core framework the entire team now relies on.",
-        // metaMediaContent[5] array of images with descriptions (14 images) image-4 - image-17
+        metaMediaContent[5], // array of images with descriptions (14 images) image-4 - image-17
       ],
       customBackground: true,
     },
@@ -58,7 +58,7 @@ export const metaContent = {
       title: "Card motion design.",
       content: [
         "With intentional motion design, the media card and its contents appear for a few seconds before collapsing, creating a smoother experience that enhances user engagement with the ad content.",
-        metaMediaContent[6], // array of videos
+        metaMediaContent[6],
       ],
     },
     {

@@ -3,7 +3,13 @@ import HtmlContentBlock from './project-content-utils/HtmlContentBlock';
 import ImageBlock from './project-content-utils/ImageBlock';
 import VideoBlock from './project-content-utils/VideoBlock';
 import Collage from './project-content-utils/Collage';
+import SimpleImageGrid from './project-content-utils/SimpleImageGrid';
 import { useIsMobile } from '@/hooks/use-mobile';
+
+type ImageItem = {
+  src: string;
+  description: string;
+};
 
 interface BaseContentItem {
   image?: string | string[];
@@ -20,6 +26,7 @@ interface BaseContentItem {
     src: string;
     poster?: string;
   }[][];
+  grid?: ImageItem[];
 }
 
 type ContentItem = 
@@ -63,6 +70,8 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
                   <HtmlContentBlock html={safeItem} />
                 ) : safeItem.collage ? (
                   <Collage columns={safeItem.collage} />
+                ) : safeItem.grid ? (
+                  <SimpleImageGrid images={safeItem.grid} />
                 ) : safeItem.video ? (
                   <VideoBlock
                     videos={safeItem.video}

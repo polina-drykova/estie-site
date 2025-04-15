@@ -4,17 +4,20 @@
 // import meta2 from '@/assets/images/meta/meta-2.svg';
 // import meta2Mobile from '@/assets/images/meta/meta-2-mobile.svg';
 import meta3 from '@/assets/images/meta/image-3.svg';
-// import meta3Mobile from '@/assets/images/meta/meta-3-mobile.svg';
-// import meta4 from '@/assets/images/meta/meta-4.svg';
-// import meta5 from '@/assets/images/meta/meta-5.svg';
-// import meta6 from '@/assets/images/meta/meta-6.svg';
-// import meta6Mobile from '@/assets/images/meta/meta-6-mobile.svg';
-// import metaPromo from '@/assets/videos/meta/meta_promo.mp4';
-// import metaV3 from '@/assets/videos/meta/fluffy_3.0.mp4';
-// import meta7 from '@/assets/images/meta/meta-7.svg';
-// import meta8 from '@/assets/images/meta/meta-8.svg';
-// import meta9 from '@/assets/images/meta/meta-9.svg';
-// import meta10 from '@/assets/images/meta/meta-10.svg';
+import meta4 from '@/assets/images/meta/image-4.svg';
+import meta5 from '@/assets/images/meta/image-5.svg';
+import meta6 from '@/assets/images/meta/image-6.svg';
+import meta7 from '@/assets/images/meta/image-7.svg';
+import meta8 from '@/assets/images/meta/image-8.svg';
+import meta9 from '@/assets/images/meta/image-9.svg';
+import meta10 from '@/assets/images/meta/image-10.svg';
+import meta11 from '@/assets/images/meta/image-11.svg';
+import meta12 from '@/assets/images/meta/image-12.svg';
+import meta13 from '@/assets/images/meta/image-13.svg';
+import meta14 from '@/assets/images/meta/image-14.svg';
+import meta15 from '@/assets/images/meta/image-15.svg';
+import meta16 from '@/assets/images/meta/image-16.svg';
+import meta17 from '@/assets/images/meta/image-17.svg';
 import meta18 from '@/assets/images/meta/image-18.svg';
 import meta19 from '@/assets/images/meta/image-19.svg';
 import meta20 from '@/assets/images/meta/image-20.svg';
@@ -31,6 +34,67 @@ import metaVid5 from '@/assets/videos/meta/video-5.mp4';
 import metaVid6 from '@/assets/videos/meta/video-6.mp4';
 import metaVid7 from '@/assets/videos/meta/video-7.mp4';
 
+export const metaGridContent = {
+  grid: [
+    {
+      src: meta4,
+      description: 'Card that supports app-ads',
+    },
+    {
+      src: meta5,
+      description: 'Collapsed card',
+    },
+    {
+      src: meta6,
+      description: 'app-card 2 lines',
+    },
+    {
+      src: meta7,
+      description: 'app-card auto open',
+    },
+    {
+      src: meta8,
+      description: 'App-card 4 lines',
+    },
+    {
+      src: meta9,
+      description: 'App-card no subtitle',
+    },
+    {
+      src: meta10,
+      description: 'App-card chained ads',
+    },
+    {
+      src: meta11,
+      description: 'App-card chained ads collapsed',
+    },
+    {
+      src: meta12,
+      description: 'Offsite conversion one line',
+    },
+    {
+      src: meta13,
+      description: 'Offsite conversion collapsed',
+    },
+    {
+      src: meta14,
+      description: 'Offsite conversion 2 lines',
+    },
+    {
+      src: meta15,
+      description: '16:9 floating unit app-ads',
+    },
+    {
+      src: meta16,
+      description: 'Offsite conversion end card',
+    },
+    {
+      src: meta17,
+      description: 'app-ads end card',
+    },
+  ],
+};
+
 export const metaMediaContent = [
   {}, // 0
   {}, // 1
@@ -45,7 +109,7 @@ export const metaMediaContent = [
     description: ["Brand", "App"],
   },
   { image: meta3, class: "vector-image" }, // 4
-  {}, // 5
+  metaGridContent, // 5
   { // 6
     video: [metaVid4, metaVid5], // to do. waiting for assests correcttion
     // class: "meta-video-nudge-80",
