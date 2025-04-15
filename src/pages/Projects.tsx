@@ -8,6 +8,7 @@ import ShowcaseMobile from '/showcase-mobile-tablet.svg?raw';
 import InlineSVG from '../components/InlineSVG';
 import { Link } from "react-router-dom";
 import '../styles/Projects.scss';
+import { preloadAssets } from "@/data/preloadAssets";
 
 const ShowcaseSrc = {
   desktop: Showcase,
@@ -40,6 +41,9 @@ const Projects = () => {
                 to={`/projects/${project.slug}`}
                 key={project.id}
                 id={project.id}
+                onPointerDown={() => {
+                  preloadAssets(project.slug);
+                }}
               >
                 <h3
                   className="project__headline"

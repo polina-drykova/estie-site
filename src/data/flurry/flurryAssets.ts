@@ -1,11 +1,11 @@
 import flurry1 from '/flurry/flurry-1.svg';
 import flurry1Mobile from '/flurry/flurry-1-mobile.svg';
 import flurry1Tablet from '/flurry/flurry-1-tablet.svg';
-import flurry2 from '@/assets/images/flurry/flurry-2.svg';
-import flurry2Mobile from '@/assets/images/flurry/flurry-2-mobile.svg';
-import flurry3 from '@/assets/images/flurry/flurry-3.svg';
-import flurry3Mobile from '@/assets/images/flurry/flurry-3-mobile.svg';
-import flurry4 from '@/assets/images/flurry/flurry-4.svg';
+import flurry2 from '/flurry/flurry-2.svg';
+import flurry2Mobile from '/flurry/flurry-2-mobile.svg';
+import flurry3 from '/flurry/flurry-3.svg';
+import flurry3Mobile from '/flurry/flurry-3-mobile.svg';
+import flurry4 from '/flurry/flurry-4.svg';
 import flurry5 from '@/assets/images/flurry/flurry-5.svg';
 import flurry6 from '@/assets/images/flurry/flurry-6.svg';
 import flurry6Mobile from '@/assets/images/flurry/flurry-6-mobile.svg';
@@ -105,3 +105,38 @@ export const flurryCollageContentMobile = {
     [],
   ],
 };
+
+export const flurryAssetsToPreload = [
+  {
+    href: flurry2,
+    as: 'image',
+    media: '(min-width: 1024px)',
+  },
+  {
+    href: flurry2Mobile,
+    as: 'image',
+    media: '(min-width: 768px)',
+  },
+  {
+    href: flurry2Mobile,
+    as: 'image',
+  },
+  {
+    href: flurry3,
+    as: 'image',
+    media: '(min-width: 1024px)',
+  },
+  {
+    href: flurry3Mobile,
+    as: 'image',
+    media: '(min-width: 768px)',
+  },
+  {
+    href: flurry3Mobile,
+    as: 'image',
+  },
+  {
+    href: flurry4,
+    as: 'image',
+  },
+];

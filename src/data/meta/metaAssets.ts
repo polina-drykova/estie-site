@@ -3,7 +3,7 @@
 // import meta1Tablet from '@/assets/images/meta/meta-1-tablet.svg';
 // import meta2 from '@/assets/images/meta/meta-2.svg';
 // import meta2Mobile from '@/assets/images/meta/meta-2-mobile.svg';
-import meta3 from '@/assets/images/meta/image-3.svg';
+import meta3 from '/meta/image-3.svg';
 import meta4 from '@/assets/images/meta/image-4.svg';
 import meta5 from '@/assets/images/meta/image-5.svg';
 import meta6 from '@/assets/images/meta/image-6.svg';
@@ -26,9 +26,9 @@ import meta22 from '@/assets/images/meta/image-22.svg';
 import meta23 from '@/assets/images/meta/image-23.svg';
 import meta24 from '@/assets/images/meta/image-24.svg';
 import meta25 from '@/assets/images/meta/image-25.svg';
-import metaVid1 from '@/assets/videos/meta/video-1.mp4';
-import metaVid2 from '@/assets/videos/meta/video-2.mp4';
-import metaVid3 from '@/assets/videos/meta/video-3.mp4';
+import metaVid1 from '/meta/video-1.mp4';
+import metaVid2 from '/meta/video-2.mp4';
+import metaVid3 from '/meta/video-3.mp4';
 import metaVid4 from '@/assets/videos/meta/video-4.mp4';
 import metaVid5 from '@/assets/videos/meta/video-5.mp4';
 import metaVid6 from '@/assets/videos/meta/video-6.mp4';
@@ -141,4 +141,26 @@ export const metaMediaContent = [
   { video: metaVid6, class: "meta-video-nudge-80" }, // 10
   {}, // 11
   { video: metaVid7, class: "meta-video-nudge-80" }, // 12
+];
+
+export const metaAssetsToPreload = [
+  {
+    href: metaVid1,
+    as: 'video',
+    type: 'video/mp4',
+  },
+  {
+    href: metaVid2,
+    as: 'video',
+    type: 'video/mp4',
+  },
+  {
+    href: metaVid3,
+    as: 'video',
+    type: 'video/mp4',
+  },
+  {
+    href: meta3,
+    as: 'image',
+  },
 ];

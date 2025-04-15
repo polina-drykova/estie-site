@@ -8,6 +8,7 @@ import CTAButton from "../components/CTAButton";
 import Landing from '/landing.svg?raw';
 import LandingMobile from '/landing-mobile.svg?raw';
 import InlineSVG from '../components/InlineSVG';
+import { preloadAssets } from '@/data/preloadAssets';
 import '../styles/Index.scss';
 
 const LandingSrc = {
@@ -70,7 +71,13 @@ const Index = () => {
                 )}
               </CustomTooltip>
 
-              <CTAButton ref={buttonRef} onClick={() => setIsPasswordTooltipOpen((prev) => !prev)}>
+              <CTAButton
+                ref={buttonRef}
+                onClick={() => {
+                  setIsPasswordTooltipOpen((prev) => !prev);
+                  preloadAssets('projects');
+                }}
+              >
                 {homeContent.ctaText}
               </CTAButton>
             </div>
