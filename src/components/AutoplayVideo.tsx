@@ -7,6 +7,7 @@ type Props = {
   className?: string;
   muted?: boolean;
   loop?: boolean;
+  priority?: boolean;
 };
 
 const AutoplayVideo: React.FC<Props> = ({
@@ -15,6 +16,7 @@ const AutoplayVideo: React.FC<Props> = ({
   className = '',
   muted = true,
   loop = true,
+  priority,
 }) => {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -59,7 +61,7 @@ const AutoplayVideo: React.FC<Props> = ({
           muted={muted}
           loop={loop}
           playsInline
-          preload="metadata"
+          preload={priority ? 'auto' : 'metadata'}
           className={`autoplay-video ${className} playing`}
         />
       {/* )} */}

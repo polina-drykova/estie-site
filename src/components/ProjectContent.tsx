@@ -83,6 +83,7 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
                     descriptionClass={safeItem.descriptionClass}
                     className={safeItem.class}
                     wrapperClassName={className}
+                    priority={index <= 4}
                   />
                 ) : safeItem.image ? (
                   <ImageBlock
@@ -94,6 +95,7 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
                     descriptionClass={safeItem.descriptionClass}
                     className={safeItem.class}
                     wrapperClassName={className}
+                    priority={index <= 4}
                   />
                 ) : null}
               </div>

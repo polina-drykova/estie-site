@@ -13,6 +13,7 @@ type Props = {
   descriptionClass?: string;
   className?: string;
   wrapperClassName?: string,
+  priority: boolean;
 };
 
 const VideoBlock: React.FC<Props> = ({
@@ -25,6 +26,7 @@ const VideoBlock: React.FC<Props> = ({
   subtitleClass,
   wrapperClassName,
   descriptionClass,
+  priority,
 }) => {
   const videoArray = Array.isArray(videos) ? videos : [videos];
   const shadowArray = Array.isArray(shadow) ? shadow : videoArray.map(() => shadow);
@@ -42,7 +44,7 @@ const VideoBlock: React.FC<Props> = ({
           )}
 
           <div className="media-wrapper">
-            <AutoplayVideo src={src} poster={poster} className={className} />
+            <AutoplayVideo src={src} poster={poster} className={className} priority={priority} />
             {shadowArray[i] && (
               <LazyImage src={Shadow} alt="Shadow" className={Array.isArray(videos) ? "image-shadows" : "image-shadow"} />
             )}

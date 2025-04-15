@@ -11,6 +11,7 @@ type Props = {
   descriptionClass?: string;
   className?: string;
   wrapperClassName?: string;
+  priority?: boolean;
 };
 
 const ImageBlock: React.FC<Props> = ({
@@ -22,6 +23,7 @@ const ImageBlock: React.FC<Props> = ({
   subtitleClass,
   wrapperClassName,
   descriptionClass,
+  priority,
 }) => {
   const imageArray = Array.isArray(images) ? images : [images];
   const shadowArray = Array.isArray(shadow) ? shadow : imageArray.map(() => shadow);
@@ -39,7 +41,7 @@ const ImageBlock: React.FC<Props> = ({
           )}
 
           <div className="media-wrapper">
-            <LazyImage src={src} alt="Project Image" className={className} />
+            <LazyImage src={src} alt="Project Image" className={className} priority={priority} />
             {shadowArray[i] && (
               <LazyImage src={Shadow} alt="Shadow" className={Array.isArray(images) ? "image-shadows" : "image-shadow"} />
             )}
