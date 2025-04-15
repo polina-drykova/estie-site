@@ -102,12 +102,14 @@ export const metaMediaContent = [
     video: [metaVid1],
     description: ["Meta Ad displays  in Candy Crush with new design"],
     // descriptionClass: "offset-top__34",
+    priority: true,
   },
   { // 3
     video: [metaVid2, metaVid3],
     subtitle: ["Watch & Browse", "App ad Video"],
     description: ["Brand", "App"],
     class: "media-min-width-260",
+    priority: true,
   },
   { image: meta3, class: "vector-image" }, // 4
   metaGridContent, // 5

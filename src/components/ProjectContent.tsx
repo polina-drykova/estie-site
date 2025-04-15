@@ -27,6 +27,7 @@ interface BaseContentItem {
     poster?: string;
   }[][];
   grid?: ImageItem[];
+  priority?: boolean;
 }
 
 type ContentItem = 
@@ -66,6 +67,8 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
 
             return (
               <div key={itemIndex} className="item-wrapper">
+
+                {index}
                 {typeof safeItem === 'string' ? (
                   <HtmlContentBlock html={safeItem} />
                 ) : safeItem.collage ? (
@@ -83,7 +86,7 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
                     descriptionClass={safeItem.descriptionClass}
                     className={safeItem.class}
                     wrapperClassName={className}
-                    priority={index <= 4}
+                    priority={safeItem.priority}
                   />
                 ) : safeItem.image ? (
                   <ImageBlock
@@ -95,7 +98,7 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
                     descriptionClass={safeItem.descriptionClass}
                     className={safeItem.class}
                     wrapperClassName={className}
-                    priority={index <= 4}
+                    priority={safeItem.priority}
                   />
                 ) : null}
               </div>

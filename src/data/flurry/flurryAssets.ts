@@ -30,26 +30,30 @@ import flurryCollage7 from '@/assets/images/flurry-collage/flurry-collage-7.svg'
 import flurryCollage8 from '@/assets/images/flurry-collage/flurry-collage-8.svg';
 
 export const flurryMediaContent = [
-  { image: {
+  {
+    image: {
       desktop: flurry1,
       tablet: flurry1Tablet,
       mobile: flurry1Mobile,
     },
     class: "image-large__ofset",
   },
-  { image: {
-    desktop: flurry2,
-    tablet: flurry2Mobile,
-    mobile: flurry2Mobile,
+  {
+    image: {
+      desktop: flurry2,
+      tablet: flurry2Mobile,
+      mobile: flurry2Mobile,
+    },
+    class: "image-large",
+    priority: true,
   },
-  class: "image-large",
-},
   { image: {
       desktop: flurry3,
       tablet: flurry3Mobile,
       mobile: flurry3Mobile,
     },
     class: "image-large",
+    priority: true,
   },
   { image: flurry4, shadow: true },
   { video: flurryPromo, class: "video-large" },
