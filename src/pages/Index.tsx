@@ -5,9 +5,10 @@ import { homeContent } from "../data/content";
 import CustomTooltip from "../components/CustomTooltip";
 import PasswordTooltip from "../components/PasswordTooltip";
 import CTAButton from "../components/CTAButton";
-import Landing from '/landing.svg';
+import Landing from '/landing.svg?raw';
 import LandingMobile from '/landing-mobile.svg';
 import LazyImage from '../components/LazyImage';
+import InlineSVG from '../components/InlineSVG';
 import '../styles/Index.scss';
 
 const LandingSrc = {
@@ -53,7 +54,8 @@ const Index = () => {
   return (
     <Layout>
       <div className="layout-content">
-        <LazyImage src={LandingSrc} alt="Logo" className="landing-image" />
+        {/* <LazyImage src={LandingSrc} alt="Logo" className="landing-image" /> */}
+        <InlineSVG src={Landing} alt="Logo" className="landing-svg" />
         <div className="layout-content__container">
           <div className="layout-content__content">
             <h1 className="layout-content__headline landing-content">{homeContent.headline}</h1>

@@ -97,7 +97,8 @@
   display: inline-block;
 }
 // mobile
-.landing-image img {
+.landing-image img,
+.landing-svg {
   max-width: 942px;
   position: absolute;
   left: 50%;
