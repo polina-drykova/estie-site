@@ -5,7 +5,7 @@ import {
 
 export const metaContent = {
   id: "meta",
-  title: "Audience Network",
+  title: "Meta Audience Network",
   slug: "meta",
   thumbnail: "/flurry-thumbnail.png",
   details: [

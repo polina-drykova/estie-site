@@ -53,13 +53,14 @@ const InlineSVG: React.FC<InlineSVGProps> = ({
     window.addEventListener('resize', updateSVG);
     return () => window.removeEventListener('resize', updateSVG);
   }, [src]);
+  // style={{ display: 'block', width: '100%', height: 'auto' }}
 
   return (
     <span
       className={className}
       role={role}
       aria-label={alt}
-      style={{ display: 'block', width: '100%', height: 'auto' }}
+      style={{ height: 'auto' }}
       dangerouslySetInnerHTML={{ __html: selectedSVG }}
     />
   );

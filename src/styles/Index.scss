@@ -131,35 +131,3 @@
     margin-top: 186px !important;
   }
 }
-
-.showcase-image-wrapper {
-  display: flex;
-  justify-content: center;
-  .showcase-image {
-    img {
-      width: 100vw;
-      background-size: cover;
-      background-position: center;
-    }
-    @media (min-width: 768px) {
-      margin-top: 0;
-      img {
-        width: 60vh;
-      }
-    }
-    @media (min-width: 1024px) {
-      margin-top: 29px;
-      img {
-        width: 972px;
-        max-width: 972px;
-      }
-    }
-  }
-  .showcase-image-flurry {
-    max-width: 1018px;
-    margin-top: 55px;
-    margin-bottom: 265px;
-    background-size: cover;
-    background-position: center;
-  }
-}

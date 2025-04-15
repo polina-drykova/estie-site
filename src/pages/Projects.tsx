@@ -3,9 +3,10 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { projectsContent } from "../data/content";
-import Showcase from '/showcase.svg';
-import ShowcaseMobile from '/showcase-mobile-tablet.svg';
-import LazyImage from '../components/LazyImage';
+import Showcase from '/showcase.svg?raw';
+import ShowcaseMobile from '/showcase-mobile-tablet.svg?raw';
+// import LazyImage from '../components/LazyImage';
+import InlineSVG from '../components/InlineSVG';
 import { Link } from "react-router-dom";
 import '../styles/Projects.scss';
 
@@ -51,7 +52,9 @@ const Projects = () => {
             ))}
           </div>
           <div className="showcase-image-wrapper">
-            <LazyImage src={ShowcaseSrc} alt="Logo" className="showcase-image" />
+            {/* <LazyImage src={ShowcaseSrc} alt="Logo" className="showcase-image" /> */}
+            <InlineSVG src={ShowcaseSrc} alt="Logo" className="showcase-svg" />
+
           </div>
         </div>
       </div>
