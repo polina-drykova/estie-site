@@ -175,13 +175,7 @@
   }
 }
 .media-description {
-  width: 260px;
-  @media (min-width: 768px) {
-    width: 100%;
-  }
-  @media (min-width: 1024px) {
-    // width: 384px;
-  }
+  width: 100%;
 }
 .media-wrapper {
   position: relative;
@@ -232,7 +226,7 @@
 .content-meta {
   margin-top: 20px;
   position: relative;
-  .showcase-image-meta-header {
+  .showcase-image-meta-header svg {
     max-width: 238px;
   }
   .layout-content__headline {
@@ -247,7 +241,7 @@
   }
   @media (min-width: 768px) {
     margin-top: 4px;
-    .showcase-image-meta-header {
+    .showcase-image-meta-header svg {
       max-width: 304px;
     }
     h1 {

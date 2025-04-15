@@ -14,7 +14,7 @@ interface ProjectDetail {
 }
 
 interface Project {
-  title: string;
+  subtitle: string;
   slug: string;
   details: ProjectDetail[];
 }
@@ -31,7 +31,7 @@ const ProjectDetailFlurry: React.FC<ProjectDetailFlurryProps> = ({ project }) =>
           {/* <LazyImage src={metaHeader} alt="meta-header" className="showcase-image-meta-header" /> */}
           <InlineSVG src={metaHeader} alt="meta-header" className="showcase-image-meta-header" />
 
-          <h1 className="layout-content__headline mb-8">{project.title}</h1>
+          <h1 className="layout-content__headline mb-8">{project.subtitle}</h1>
         </div>
         <div className="showcase-image-wrapper">
           {/* <LazyImage src={metaLanding} alt="meta-landing" className="showcase-image-meta" /> */}
@@ -43,7 +43,7 @@ const ProjectDetailFlurry: React.FC<ProjectDetailFlurryProps> = ({ project }) =>
             <div className={`d-flex ${detail.customBackground ? 'custom-background-wrapper' : ''}`} key={index}>
               {detail.customBackground && <div className="custom-background"></div>}
               <ProjectContent
-                title={detail.title}
+                title={detail.subtitle}
                 header={detail.header}
                 content={detail.content}
                 className={detail.className}
