@@ -72,7 +72,7 @@ const App = () => (
               } 
             />
             <Route 
-              path="/project/:slug" 
+              path="/projects/:slug" 
               element={
                 <ProtectedRoute>
                   <ProjectDetailWrapper />

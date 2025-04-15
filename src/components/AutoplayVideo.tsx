@@ -51,7 +51,7 @@ const AutoplayVideo: React.FC<Props> = ({
 
   return (
     <div ref={wrapperRef}>
-      {hasRendered && (
+      {/* {hasRendered && ( */}
         <video
           ref={videoRef}
           src={src}
@@ -62,7 +62,7 @@ const AutoplayVideo: React.FC<Props> = ({
           preload="metadata"
           className={`autoplay-video ${className} playing`}
         />
-      )}
+      {/* )} */}
     </div>
   );
 };

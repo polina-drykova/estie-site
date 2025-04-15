@@ -5,7 +5,6 @@ import Layout from "../components/Layout";
 import { projectsContent } from "../data/content";
 import Showcase from '/showcase.svg?raw';
 import ShowcaseMobile from '/showcase-mobile-tablet.svg?raw';
-// import LazyImage from '../components/LazyImage';
 import InlineSVG from '../components/InlineSVG';
 import { Link } from "react-router-dom";
 import '../styles/Projects.scss';
@@ -38,7 +37,7 @@ const Projects = () => {
           <div className="projects-links-wrapper">
             {projectsContent.projects.map((project) => (
               <Link 
-                to={`/project/${project.slug}`}
+                to={`/projects/${project.slug}`}
                 key={project.id}
                 id={project.id}
               >
@@ -52,9 +51,7 @@ const Projects = () => {
             ))}
           </div>
           <div className="showcase-image-wrapper">
-            {/* <LazyImage src={ShowcaseSrc} alt="Logo" className="showcase-image" /> */}
             <InlineSVG src={ShowcaseSrc} alt="Logo" className="showcase-svg" />
-
           </div>
         </div>
       </div>

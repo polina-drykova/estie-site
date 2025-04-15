@@ -107,6 +107,7 @@ export const metaMediaContent = [
     video: [metaVid2, metaVid3],
     subtitle: ["Watch & Browse", "App ad Video"],
     description: ["Brand", "App"],
+    class: "media-min-width-260",
   },
   { image: meta3, class: "vector-image" }, // 4
   metaGridContent, // 5

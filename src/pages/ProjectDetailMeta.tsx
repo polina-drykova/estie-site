@@ -1,8 +1,9 @@
 import React from "react";
 import ProjectContent from "../components/ProjectContent";
 import LazyImage from '../components/LazyImage';
-import metaLanding from '/meta-landing.svg';
-import metaHeader from '/meta-header.svg';
+import metaLanding from '/meta-landing.svg?raw';
+import metaHeader from '/meta-header.svg?raw';
+import InlineSVG from '../components/InlineSVG';
 
 interface ProjectDetail {
   title: string;
@@ -27,11 +28,15 @@ const ProjectDetailFlurry: React.FC<ProjectDetailFlurryProps> = ({ project }) =>
     <div className="layout-content">
       <div className="layout-content__container">
         <div className="layout-content__content content-meta">
-          <LazyImage src={metaHeader} alt="meta-header" className="showcase-image-meta-header" />
+          {/* <LazyImage src={metaHeader} alt="meta-header" className="showcase-image-meta-header" /> */}
+          <InlineSVG src={metaHeader} alt="meta-header" className="showcase-image-meta-header" />
+
           <h1 className="layout-content__headline mb-8">{project.title}</h1>
         </div>
         <div className="showcase-image-wrapper">
-          <LazyImage src={metaLanding} alt="flurry-landing" className="showcase-image-meta" />
+          {/* <LazyImage src={metaLanding} alt="meta-landing" className="showcase-image-meta" /> */}
+          <InlineSVG src={metaLanding} alt="meta-landing" className="showcase-image-meta" />
+
         </div>
         <div>
           {project.details.map((detail, index) => (

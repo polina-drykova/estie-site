@@ -96,11 +96,8 @@
   position: relative;
   display: inline-block;
 }
-// mobile
-.landing-image img,
 .landing-svg svg {
   width: 100%;
-  // max-width: 942px;
   max-width: 110vw;
   position: absolute;
   left: 50%;
@@ -109,25 +106,16 @@
   z-index: -1;
   background-size: cover;
   background-position: center;
-  // Mobile first: default styles for mobile
 
-  // Tablets (iPad portrait and up)
   @media (min-width: 768px) {
-    // tablet & small desktop styles
-    // top: 50%;
     bottom: unset;
     margin-top: 100px;
     width: 942px;
     max-width: 942px;
-    // max-width: 110vw;
-    // transform: translate(-50%, -50%);
   }
-
-  // Small desktops
   @media (min-width: 1024px) {
     top: 50%;
     transform: translate(-50%, -50%);
-    // medium screens (iPad landscape, laptops)
     margin-top: 186px !important;
   }
 }

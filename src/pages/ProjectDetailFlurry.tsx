@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectContent from "../components/ProjectContent";
-import LazyImage from '../components/LazyImage';
-import FlurryLanding from '/flurry-landing.svg';
+import InlineSVG from '../components/InlineSVG';
+import FlurryLanding from '/flurry-landing.svg?raw';
 
 interface ProjectDetail {
   title: string;
@@ -27,7 +27,7 @@ const ProjectDetailFlurry: React.FC<ProjectDetailFlurryProps> = ({ project }) =>
           <h1 className="layout-content__headline mb-8">{project.title}</h1>
         </div>
         <div className="showcase-image-wrapper">
-          <LazyImage src={FlurryLanding} alt="flurry-landing" className="showcase-image-flurry" />
+          <InlineSVG src={FlurryLanding} alt="flurry-landing" className="showcase-image-flurry" />
         </div>
         <div>
           {project.details.map((detail, index) => (

@@ -73,8 +73,6 @@ const Index = () => {
               <CTAButton ref={buttonRef} onClick={() => setIsPasswordTooltipOpen((prev) => !prev)}>
                 {homeContent.ctaText}
               </CTAButton>
-
-              {/* <InlineSVG src={LandingSrc} alt="Logo" className="landing-svg" /> */}
             </div>
           </div>
         </div>

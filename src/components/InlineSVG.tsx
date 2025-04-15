@@ -53,7 +53,6 @@ const InlineSVG: React.FC<InlineSVGProps> = ({
     window.addEventListener('resize', updateSVG);
     return () => window.removeEventListener('resize', updateSVG);
   }, [src]);
-  // style={{ display: 'block', width: '100%', height: 'auto' }}
 
   return (
     <span
