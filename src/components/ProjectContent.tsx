@@ -68,7 +68,6 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
             return (
               <div key={itemIndex} className="item-wrapper">
 
-                {index}
                 {typeof safeItem === 'string' ? (
                   <HtmlContentBlock html={safeItem} />
                 ) : safeItem.collage ? (
