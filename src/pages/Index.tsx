@@ -48,7 +48,7 @@ const Index = () => {
   const handlePasswordSuccess = () => {
     sessionStorage.setItem("hasAccess", "true");
     setIsPasswordTooltipOpen(false);
-    navigate("/work");
+    navigate("/projects");
   };
 
   return (

@@ -7,7 +7,7 @@ import Showcase from '/showcase.svg';
 import ShowcaseMobile from '/showcase-mobile-tablet.svg';
 import LazyImage from '../components/LazyImage';
 import { Link } from "react-router-dom";
-import '../styles/Work.scss';
+import '../styles/Projects.scss';
 
 const ShowcaseSrc = {
   desktop: Showcase,
@@ -15,7 +15,7 @@ const ShowcaseSrc = {
   mobile: ShowcaseMobile,
 };
 
-const Work = () => {
+const Projects = () => {
   const navigate = useNavigate();
   
   // Check if user has access (has entered password)
@@ -59,4 +59,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Projects;

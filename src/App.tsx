@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import Index from "./pages/Index";
-import Work from "./pages/Work";
+import Projects from "./pages/Projects";
 import ProjectDetailWrapper from "./pages/ProjectDetailWrapper";
 // import ProjectDetailFlurry from "./pages/ProjectDetailFlurry";
 import NotFound from "./pages/NotFound";
@@ -64,10 +64,10 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route 
-              path="/work" 
+              path="/projects" 
               element={
                 <ProtectedRoute>
-                  <Work />
+                  <Projects />
                 </ProtectedRoute>
               } 
             />
@@ -79,14 +79,6 @@ const App = () => (
                 </ProtectedRoute>
               } 
             />
-            {/* <Route 
-              path="/project/flurry-ai" 
-              element={
-                <ProtectedRoute>
-                  <ProjectDetailFlurry />
-                </ProtectedRoute>
-              } 
-            /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </RouteTransition>

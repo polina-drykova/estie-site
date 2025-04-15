@@ -21,10 +21,10 @@ const ProjectDetail = () => {
     }
   }, [navigate]);
   
-  // Redirect to work page if project not found
+  // Redirect to projects page if project not found
   useEffect(() => {
     if (!project) {
-      navigate("/work");
+      navigate("/projects");
     }
   }, [project, navigate]);
   
