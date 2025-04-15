@@ -1,6 +1,5 @@
 import React from "react";
 import ProjectContent from "../components/ProjectContent";
-import LazyImage from '../components/LazyImage';
 import metaLanding from '/meta-landing.svg?raw';
 import metaHeader from '/meta-header.svg?raw';
 import InlineSVG from '../components/InlineSVG';
@@ -28,7 +27,6 @@ const ProjectDetailFlurry: React.FC<ProjectDetailFlurryProps> = ({ project }) =>
     <div className="layout-content">
       <div className="layout-content__container">
         <div className="layout-content__content content-meta">
-          {/* <LazyImage src={metaHeader} alt="meta-header" className="showcase-image-meta-header" /> */}
           <InlineSVG src={metaHeader} alt="meta-header" className="showcase-image-meta-header" />
 
           <h1 className="layout-content__headline mb-8">{project.subtitle}</h1>
@@ -43,7 +41,7 @@ const ProjectDetailFlurry: React.FC<ProjectDetailFlurryProps> = ({ project }) =>
             <div className={`d-flex ${detail.customBackground ? 'custom-background-wrapper' : ''}`} key={index}>
               {detail.customBackground && <div className="custom-background"></div>}
               <ProjectContent
-                title={detail.subtitle}
+                title={detail.title}
                 header={detail.header}
                 content={detail.content}
                 className={detail.className}
