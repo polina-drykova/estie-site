@@ -310,7 +310,13 @@ h3.content-item-custom-header-2 {
 
 .meta-video-nudge-80 {
   margin-top: -80px;
-  width: 100vw;
+  width: 795px;
+  @media (min-width: 768px) {
+    width: 834px;
+  }
+  @media (min-width: 1024px) {
+    width: 100vw;
+  }
 }
 .offset-top {
   &__34 {
