@@ -143,7 +143,11 @@ export const metaMediaContent = [
   { video: metaVid7, class: "meta-video-nudge-80" }, // 12
 ];
 
-export const metaAssetsToPreload = [
+export const metaAssetsToPreloadPriority = [
+  {
+    href: '/meta-header.svg',
+    as: 'image',
+  },
   {
     href: metaVid1,
     as: 'video',
@@ -154,6 +158,9 @@ export const metaAssetsToPreload = [
     as: 'video',
     type: 'video/mp4',
   },
+];
+
+export const metaAssetsToPreload = [
   {
     href: metaVid3,
     as: 'video',

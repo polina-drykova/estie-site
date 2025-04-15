@@ -1,31 +1,21 @@
-import { flurryAssetsToPreload } from './flurry/flurryAssets';
-import { metaAssetsToPreload } from './meta/metaAssets';
+import {
+  flurryAssetsToPreloadPriority,
+  flurryAssetsToPreload,
+} from './flurry/flurryAssets';
+import {
+  metaAssetsToPreloadPriority,
+  metaAssetsToPreload,
+} from './meta/metaAssets';
 
-const projectsAssestsToPreload = [
+const projectsAssetsToPreloadPriority = [
+  ...flurryAssetsToPreloadPriority,
+  ...metaAssetsToPreloadPriority,
   {
     href: '/flurry-landing.svg',
     as: 'image',
   },
   {
     href: '/meta-landing.svg',
-    as: 'image',
-  },
-  {
-    href: '/flurry/flurry-1.svg',
-    as: 'image',
-    media: '(min-width: 1024px)',
-  },
-  {
-    href: '/flurry/flurry-1-tablet.svg',
-    as: 'image',
-    media: '(min-width: 768px)',
-  },
-  {
-    href: '/flurry/flurry-1-mobile.svg',
-    as: 'image',
-  },
-  {
-    href: '/meta-header.svg',
     as: 'image',
   },
 ];
@@ -65,5 +55,5 @@ export function preloadAssets(assets: PreloadAsset[] | string) {
 const preloadMap: Record<string, PreloadAsset[]> = {
   'flurry-ai': flurryAssetsToPreload as PreloadAsset[],
   meta: metaAssetsToPreload as PreloadAsset[],
-  projects: projectsAssestsToPreload as PreloadAsset[],
+  projects: projectsAssetsToPreloadPriority as PreloadAsset[],
 };

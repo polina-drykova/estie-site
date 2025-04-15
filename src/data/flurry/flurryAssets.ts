@@ -9,7 +9,7 @@ import flurry4 from '/flurry/flurry-4.svg';
 import flurry5 from '@/assets/images/flurry/flurry-5.svg';
 import flurry6 from '@/assets/images/flurry/flurry-6.svg';
 import flurry6Mobile from '@/assets/images/flurry/flurry-6-mobile.svg';
-import flurryPromo from '@/assets/videos/flurry/flurry_promo.mp4';
+import flurryPromo from '/flurry/flurry_promo.mp4';
 import flurryV3 from '@/assets/videos/flurry/fluffy_3.0.mp4';
 import flurry7 from '@/assets/images/flurry/flurry-7.svg';
 import flurry8 from '@/assets/images/flurry/flurry-8.svg';
@@ -106,7 +106,21 @@ export const flurryCollageContentMobile = {
   ],
 };
 
-export const flurryAssetsToPreload = [
+export const flurryAssetsToPreloadPriority = [
+  {
+    href: '/flurry/flurry-1.svg',
+    as: 'image',
+    media: '(min-width: 1024px)',
+  },
+  {
+    href: '/flurry/flurry-1-tablet.svg',
+    as: 'image',
+    media: '(min-width: 768px)',
+  },
+  {
+    href: '/flurry/flurry-1-mobile.svg',
+    as: 'image',
+  },
   {
     href: flurry2,
     as: 'image',
@@ -121,6 +135,9 @@ export const flurryAssetsToPreload = [
     href: flurry2Mobile,
     as: 'image',
   },
+];
+
+export const flurryAssetsToPreload = [
   {
     href: flurry3,
     as: 'image',
@@ -138,5 +155,10 @@ export const flurryAssetsToPreload = [
   {
     href: flurry4,
     as: 'image',
+  },
+  {
+    href: flurryPromo,
+    as: 'video',
+    type: 'video/mp4',
   },
 ];
