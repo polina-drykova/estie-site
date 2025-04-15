@@ -20,7 +20,7 @@ export const metaContent = {
         // metaMediaContent[0] image-1
         "<h3 class='text-center mar-t-19'>Meta wins bid to <br> display ad in Candy Crush</h3>",
         // metaMediaContent[1] image-2
-        metaMediaContent[2], // video with description
+        metaMediaContent[2],
       ],
     },
     {
@@ -38,8 +38,6 @@ export const metaContent = {
       ],
     },
     {
-      // image-3
-      // title: "Building a Design System for AN",
       content: [
         metaMediaContent[4],
         "<h3 class='content-item-custom-header'>Building a Design System for AN</h3>",
@@ -48,7 +46,7 @@ export const metaContent = {
         "",
         "<h3 class='content-item-custom-header'>A Versatile Card Design System</h3>",
         "We developed a flexible card system that adapts seamlessly across advertisers, goals, platforms, devices, and aspect ratios. Built with reusable components, it has become a core framework the entire team now relies on.",
-        metaMediaContent[5], // array of images with descriptions (14 images) image-4 - image-17
+        metaMediaContent[5],
       ],
       customBackground: true,
     },
@@ -90,12 +88,11 @@ export const metaContent = {
       ],
       className: "hidden-media-overflow",
     },
-    // TODO:
     {
       title: "Design System in Watch & Browse",
       content: [
         "We adapted our design system for other formats like Watch & Browse, ensuring it scales seamlessly across existing and future formats.",
-        // metaMediaContent[11] array of images with shadows (image-26, image-27, image-28, image-29)
+        metaMediaContent[11],
       ],
     },
     {

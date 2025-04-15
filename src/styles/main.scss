@@ -83,3 +83,12 @@ p {
 .d-block {
   display: block;
 }
+
+.visibility-block.hidden {
+  opacity: 0;
+}
+
+.visibility-block.visible {
+  animation: fadeIn 0.5s ease-out;
+  opacity: 1;
+}

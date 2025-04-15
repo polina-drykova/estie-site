@@ -1,11 +1,10 @@
 
 import React from "react";
-// import { Link } from "react-router-dom";
 import { siteConfig } from "../data/content";
-import logo from '@/assets/images/envelope.svg';
-import LazyImage from './LazyImage';
-import '../styles/Layout.scss';
 import Floater from "./Floater";
+import InlineSVG from './InlineSVG';
+import envelope from '@/assets/images/envelope.svg?raw';
+import '../styles/Layout.scss';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -31,7 +30,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         aria-label="Send email"
         target="_blank"
       >
-        <LazyImage src={logo} alt="Logo" />
+        <InlineSVG src={envelope} alt="envelope" />
       </a>
     </div>
   );

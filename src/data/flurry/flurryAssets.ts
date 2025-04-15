@@ -80,7 +80,6 @@ export const flurryCollageContent = {
     [
       { type: 'image', src: flurryCollage1 },
       { type: 'image', src: flurryCollage2 },
-      // { type: 'video', src: flurryCollage3, poster: '/posters/left-3.jpg' },
       { type: 'video', src: flurryCollage3 },
       { type: 'image', src: flurryCollage4 },
     ],
@@ -135,9 +134,6 @@ export const flurryAssetsToPreloadPriority = [
     href: flurry2Mobile,
     as: 'image',
   },
-];
-
-export const flurryAssetsToPreload = [
   {
     href: flurry3,
     as: 'image',
@@ -152,6 +148,9 @@ export const flurryAssetsToPreload = [
     href: flurry3Mobile,
     as: 'image',
   },
+];
+
+export const flurryAssetsToPreload = [
   {
     href: flurry4,
     as: 'image',

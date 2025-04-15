@@ -26,6 +26,10 @@ import meta22 from '@/assets/images/meta/image-22.svg';
 import meta23 from '@/assets/images/meta/image-23.svg';
 import meta24 from '@/assets/images/meta/image-24.svg';
 import meta25 from '@/assets/images/meta/image-25.svg';
+import meta26 from '@/assets/images/meta/image-26.svg';
+import meta27 from '@/assets/images/meta/image-27.svg';
+import meta28 from '@/assets/images/meta/image-28.svg';
+import meta29 from '@/assets/images/meta/image-29.svg';
 import metaVid1 from '/meta/video-1.mp4';
 import metaVid2 from '/meta/video-2.mp4';
 import metaVid3 from '/meta/video-3.mp4';
@@ -98,26 +102,29 @@ export const metaGridContent = {
 export const metaMediaContent = [
   {}, // 0
   {}, // 1
-  { // 2
+  {
+    index: 2,
     video: [metaVid1],
     description: ["Meta Ad displays  in Candy Crush with new design"],
-    // descriptionClass: "offset-top__34",
     priority: true,
   },
-  { // 3
+  {
+    index: 3,
     video: [metaVid2, metaVid3],
     subtitle: ["Watch & Browse", "App ad Video"],
     description: ["Brand", "App"],
     class: "media-min-width-260",
     priority: true,
   },
-  { image: meta3, class: "vector-image" }, // 4
-  metaGridContent, // 5
-  { // 6
+  { index: 4, image: meta3, class: "vector-image" },
+  metaGridContent, // index: 5,
+  {
+    index: 6,
     video: [metaVid4, metaVid5], // to do. waiting for assests correcttion
     // class: "meta-video-nudge-80",
   },
-  { // 7
+  {
+    index: 7,
     image: [meta18, meta19, meta20],
     subtitle: ["9:16 Ad on Facebook Feed - iOS", "9:16 before - Android", "9:16 after - Android"],
     description: [
@@ -127,20 +134,27 @@ export const metaMediaContent = [
     ],
     shadow: true,
   },
-  { // 8
+  {
+    index: 8,
     image: [meta21, meta22, meta23, meta24],
     description: ["16:9 video ad", "1:1 video ad", "4:5 video ad", "9:16 video ad"],
     shadow: true,
   },
-  { // 9
+  {
+    index: 9,
     image: [meta25],
     description: ["Optimised for 4:5 and 9:16 ratios, with horizontal App Store screenshots."],
     descriptionClass: "offset-top__34",
     class: "standalone-image",
   },
-  { video: metaVid6, class: "meta-video-nudge-80" }, // 10
-  {}, // 11
-  { video: metaVid7, class: "meta-video-nudge-80" }, // 12
+  { index: 10, video: metaVid6, class: "meta-video-nudge-80" },
+  {
+    index: 11,
+    image: [meta26, meta27, meta28, meta29],
+    description: ["9:16 ad", "Collapsed card + auto open", "75% browser", "OC end card"],
+    shadow: true,
+  },
+  { index: 12, video: metaVid7, class: "meta-video-nudge-80" },
 ];
 
 export const metaAssetsToPreloadPriority = [

@@ -5,6 +5,7 @@ import VideoBlock from './project-content-utils/VideoBlock';
 import Collage from './project-content-utils/Collage';
 import SimpleImageGrid from './project-content-utils/SimpleImageGrid';
 import { useIsMobile } from '@/hooks/use-mobile';
+import VisibilityBlock from './VisibilityBlock';
 
 type ImageItem = {
   src: string;
@@ -47,7 +48,7 @@ interface ProjectsContentProps {
 }
 
 const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, content, className, index }) => {
-  const isMobile = useIsMobile(); // ✅ detect device
+  const isMobile = useIsMobile();
 
   return (
     <div className="project-content">
@@ -58,7 +59,7 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
           {content.map((item, itemIndex) => {
             let finalItem = item;
 
-            // ✅ Choose mobile or desktop version if available
+            // Choose mobile or desktop version if available
             if (typeof item !== 'string' && 'mobile' in item && 'desktop' in item) {
               finalItem = isMobile ? item.mobile : item.desktop;
             }
@@ -66,8 +67,7 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
 
 
             return (
-              <div key={itemIndex} className="item-wrapper">
-
+              <VisibilityBlock key={itemIndex} className="item-wrapper">
                 {typeof safeItem === 'string' ? (
                   <HtmlContentBlock html={safeItem} />
                 ) : safeItem.collage ? (
@@ -100,7 +100,7 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
                     priority={safeItem.priority}
                   />
                 ) : null}
-              </div>
+              </VisibilityBlock>
             );
           })}
         </div>

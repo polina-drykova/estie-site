@@ -7,13 +7,14 @@
   padding: 0 1.5rem;
   position: relative;
   overflow-x: clip;
+  align-items: center;
   
   @media (min-width: 768px) {
     padding: 0 3rem;
   }
   
   &__container {
-    max-width: 80rem;
+    // max-width: 80rem;
     margin: 0 auto;
     width: 100%;
   }
