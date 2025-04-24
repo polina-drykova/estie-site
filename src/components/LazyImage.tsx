@@ -14,7 +14,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className = '', priorit
         src={src}
         alt={alt}
         className={className}
-        fetchPriority={priority ? 'high' : undefined}
+        fetchpriority={priority ? 'high' : undefined}
         decoding="async"
       />
     );
@@ -27,7 +27,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className = '', priorit
       <img
         src={src.mobile}
         alt={alt}
-        fetchPriority={priority ? 'high' : undefined}
+        fetchpriority={priority ? 'high' : undefined}
         decoding="async"
       />
     </picture>

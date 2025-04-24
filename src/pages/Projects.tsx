@@ -56,6 +56,10 @@ const Projects = () => {
           </div>
           <div className="showcase-image-wrapper">
             <InlineSVG src={ShowcaseSrc} alt="Logo" className="showcase-svg" />
+            <div className="showcase-hotzones">
+              <Link to="/projects/flurry-ai" className="hotzone" />
+              <Link to="/projects/meta-audience-network" className="hotzone" />
+            </div>
           </div>
         </div>
       </div>
