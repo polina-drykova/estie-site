@@ -15,7 +15,7 @@ export const metaContent = {
       content: [
         "Audience Network (AN) is a network of Facebook-approved mobile apps and websites where Meta runs ads.",
         "Meta bids to serve ads in mobile apps like Candy Crush, displaying native ad formats from Facebook, Instagram, WhatsApp, and more. These ads vary in aspect ratios, advertisers, and objectives.",
-        "Recently, <u>competitor CTRs have significantly outperformed Meta’s</u>, making it clear that AN needed an upgrade to stay competitive and drive engagement. However, AN hadn’t seen a redesign in six years due to the scale and complexity of the project. It was time for a change.",
+        "Recently, <u>competitor CTRs have significantly outperformed Meta's</u>, making it clear that AN needed an upgrade to stay competitive and drive engagement. However, AN hadn’t seen a redesign in six years due to the scale and complexity of the project. It was time for a change.",
         "<h3 class='text-center mar-t-19'>What is Audience Network? (Visually)</h3>",
         // metaMediaContent[0] image-1
         "<h3 class='text-center mar-t-19'>Meta wins bid to <br> display ad in Candy Crush</h3>",
