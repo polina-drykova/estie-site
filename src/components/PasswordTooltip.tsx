@@ -14,6 +14,7 @@ const PasswordTooltip: React.FC<PasswordTooltipProps> = ({ onSuccess, onCancel, 
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
   const [isValid, setIsValid] = useState(false);
   const redirectTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const errorResetTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Auto-Focus the first input when the tooltip is opened
   useEffect(() => {
@@ -39,7 +40,7 @@ const PasswordTooltip: React.FC<PasswordTooltipProps> = ({ onSuccess, onCancel, 
     if (isValid) {
       redirectTimerRef.current = setTimeout(() => {
         onSuccess();
-      }, 2000);
+      }, 1000);
     }
     return () => {
       if (redirectTimerRef.current) {
@@ -50,22 +51,25 @@ const PasswordTooltip: React.FC<PasswordTooltipProps> = ({ onSuccess, onCancel, 
 
   const handleDigitChange = (index: number, value: string) => {
     if (!/^\d*$/.test(value)) return; // Allow only numbers
-
+  
     const newDigits = [...digits];
     newDigits[index] = value.slice(0, 1); // Store only 1 digit
     setDigits(newDigits);
-
+  
     // Remove error state when user starts typing again
     if (hasError) {
       setHasError(false);
       tooltipRef.current?.classList.remove("shake");
+      if (errorResetTimerRef.current) {
+        clearTimeout(errorResetTimerRef.current);
+      }
     }
-
+  
     // Move focus to the next input when a digit is entered
     if (value && index < 3) {
       inputRefs.current[index + 1]?.focus();
     }
-
+  
     // Check password when all 4 digits are entered
     if (index === 3 && newDigits.every((d) => d !== "")) {
       if (newDigits.join("") === siteConfig.password) {
@@ -74,6 +78,16 @@ const PasswordTooltip: React.FC<PasswordTooltipProps> = ({ onSuccess, onCancel, 
       } else {
         setHasError(true);
         triggerShake();
+  
+        // Reset digits after 2 seconds if password is wrong
+        if (errorResetTimerRef.current) {
+          clearTimeout(errorResetTimerRef.current);
+        }
+        errorResetTimerRef.current = setTimeout(() => {
+          setDigits(["", "", "", ""]);
+          setHasError(false);
+          inputRefs.current[0]?.focus();
+        }, 2000);
       }
     }
   };
@@ -115,6 +129,17 @@ const PasswordTooltip: React.FC<PasswordTooltipProps> = ({ onSuccess, onCancel, 
       tooltipRef.current?.classList.remove("shake");
     }, 500);
   };
+
+  useEffect(() => {
+    return () => {
+      if (redirectTimerRef.current) {
+        clearTimeout(redirectTimerRef.current);
+      }
+      if (errorResetTimerRef.current) {
+        clearTimeout(errorResetTimerRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="password-tooltip">
