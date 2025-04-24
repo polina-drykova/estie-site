@@ -344,3 +344,40 @@ h3.content-item-custom-header-2 {
   min-width: 260px !important;
   width: 260px !important;
 }
+
+.meta-video-custom-video-sizes {
+  gap: 16px;
+  display: flex;
+  justify-content: start;
+  width: 100vw;
+  padding-left: 40px;
+  @media (min-width: 768px) {
+    padding-left: 0px;
+    gap: 24px;
+  }
+  @media (min-width: 1024px) {
+    padding-left: 0px;
+    gap: 90px;
+  }
+
+  :nth-child(1) {
+    .autoplay-video.playing {
+      width: 272px;
+      min-width: 272px;
+    }
+  }
+  :nth-child(2) {
+    width: 285px;
+    height: 620px;
+    overflow: hidden;
+    .autoplay-video.playing {
+      width: 427px;
+      border: 2px solid gainsboro;
+      margin: -74px;
+      margin-left: 160px;
+      @media (min-width: 768px) {
+        margin-left: -74px;
+      }
+    }
+  }
+}

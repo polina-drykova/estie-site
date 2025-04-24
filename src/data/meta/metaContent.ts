@@ -59,6 +59,7 @@ export const metaContent = {
         "With intentional motion design, the media card and its contents appear for a few seconds before collapsing, creating a smoother experience that enhances user engagement with the ad content.",
         metaMediaContent[6],
       ],
+      className: "meta-video-custom-video-sizes",
     },
     {
       title: "Ad Translation from Facebook to AN",

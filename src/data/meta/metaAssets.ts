@@ -120,8 +120,7 @@ export const metaMediaContent = [
   metaGridContent, // index: 5,
   {
     index: 6,
-    video: [metaVid4, metaVid5], // to do. waiting for assests correcttion
-    // class: "meta-video-nudge-80",
+    video: [metaVid4, metaVid5],
   },
   {
     index: 7,
