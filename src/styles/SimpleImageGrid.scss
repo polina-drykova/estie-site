@@ -3,9 +3,30 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-top: 166px;
+  :nth-child(12) {
+    img {
+      margin-bottom: 25px;
+    }
+  }
+  :nth-child(14) {
+    img {
+      margin-bottom: 33px;
+    }
+  }
 }
 
 @media (max-width: 1023px) {
+  :nth-child(14) {
+    img {
+      margin-bottom: unset;
+    }
+  }
+  :nth-child(13) {
+    img {
+      margin-bottom: unset;
+      margin-bottom: 33px;
+    }
+  }
   .simple-image-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 20px;
@@ -14,6 +35,17 @@
 }
 
 @media (max-width: 767px) {
+  :nth-child(14) {
+    img {
+      margin-bottom: 0 !important;
+    }
+  }
+  :nth-child(13) {
+    img {
+      margin-bottom: unset;
+      margin-bottom: 33px;
+    }
+  }
   .simple-image-grid {
     margin-top: 143px;
     grid-template-columns: 1fr;
