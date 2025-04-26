@@ -9,6 +9,7 @@ import Landing from '/landing.svg?raw';
 import LandingMobile from '/landing-mobile.svg?raw';
 import InlineSVG from '../components/InlineSVG';
 import { preloadAssets } from '@/data/preloadAssets';
+import VisibilityBlock from '../components/VisibilityBlock';
 import '../styles/Index.scss';
 
 const LandingSrc = {
@@ -54,8 +55,11 @@ const Index = () => {
   return (
     <Layout>
       <div className="layout-content">
-        <InlineSVG src={LandingSrc} alt="Logo" className="landing-svg" />
-        <div className="layout-content__container">
+        <VisibilityBlock className="landing-svg media-visibility-block">
+          {/* <InlineSVG src={LandingSrc} alt="Logo" className="landing-svg" /> */}
+          <InlineSVG src={LandingSrc} alt="Logo" />
+        </VisibilityBlock>
+        <VisibilityBlock className="layout-content__container">
           <div className="layout-content__content">
             <h1 className="layout-content__headline landing-content">{homeContent.headline}</h1>
             <p className="layout-content__intro landing-content">{homeContent.introduction}</p>
@@ -82,7 +86,7 @@ const Index = () => {
               </CTAButton>
             </div>
           </div>
-        </div>
+        </VisibilityBlock>
       </div>
     </Layout>
   );

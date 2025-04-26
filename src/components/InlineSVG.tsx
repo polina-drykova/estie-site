@@ -56,7 +56,7 @@ const InlineSVG: React.FC<InlineSVGProps> = ({
 
   return (
     <span
-      className={className}
+      className={`inline-svg ${className}`}
       role={role}
       aria-label={alt}
       style={{ height: 'auto' }}

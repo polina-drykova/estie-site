@@ -3,6 +3,7 @@ import ProjectContent from "../components/ProjectContent";
 import metaLanding from "/meta-landing.svg?raw";
 import metaHeader from "/meta-header.svg?raw";
 import InlineSVG from "../components/InlineSVG";
+import VisibilityBlock from '../components/VisibilityBlock';
 
 interface ProjectDetail {
   title: string;
@@ -30,7 +31,7 @@ const ProjectDetailFlurry: React.FC<ProjectDetailFlurryProps> = ({
   return (
     <div className="layout-content">
       <div className="layout-content__container">
-        <div className="layout-content__content content-meta">
+        <VisibilityBlock className="layout-content__content content-meta">
           <InlineSVG
             src={metaHeader}
             alt="meta-header"
@@ -38,15 +39,14 @@ const ProjectDetailFlurry: React.FC<ProjectDetailFlurryProps> = ({
           />
 
           <h1 className="layout-content__headline mb-8">{project.subtitle}</h1>
-        </div>
-        <div className="showcase-image-wrapper">
-          {/* <LazyImage src={metaLanding} alt="meta-landing" className="showcase-image-meta" /> */}
+        </VisibilityBlock>
+        <VisibilityBlock className="showcase-image-wrapper media-visibility-block">
           <InlineSVG
             src={metaLanding}
             alt="meta-landing"
             className="showcase-image-meta"
           />
-        </div>
+        </VisibilityBlock>
         <div>
           {project.details.map((detail, index) => (
             <div

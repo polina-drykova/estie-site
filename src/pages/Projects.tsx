@@ -9,6 +9,7 @@ import InlineSVG from '../components/InlineSVG';
 import { Link } from "react-router-dom";
 import '../styles/Projects.scss';
 import { preloadAssets } from "@/data/preloadAssets";
+import VisibilityBlock from '../components/VisibilityBlock';
 
 const ShowcaseSrc = {
   desktop: Showcase,
@@ -30,7 +31,7 @@ const Projects = () => {
   return (
     <Layout>
       <div className="layout-content">
-        <div className="layout-content__container">
+        <VisibilityBlock className="layout-content__container">
           <div className="layout-content__content">
             <h1 className="layout-content__headline mb-8">{projectsContent.intro.title}</h1>
             <p className="layout-content__intro">{projectsContent.intro.description}</p>
@@ -54,14 +55,14 @@ const Projects = () => {
               </Link>
             ))}
           </div>
-          <div className="showcase-image-wrapper">
-            <InlineSVG src={ShowcaseSrc} alt="Logo" className="showcase-svg" />
-            <div className="showcase-hotzones">
-              <Link to="/projects/flurry-ai" className="hotzone" />
-              <Link to="/projects/meta-audience-network" className="hotzone" />
-            </div>
+        </VisibilityBlock>
+        <VisibilityBlock className="showcase-image-wrapper media-visibility-block">
+          <InlineSVG src={ShowcaseSrc} alt="Logo" className="showcase-svg" />
+          <div className="showcase-hotzones">
+            <Link to="/projects/flurry-ai" className="hotzone" />
+            <Link to="/projects/meta" className="hotzone" />
           </div>
-        </div>
+        </VisibilityBlock>
       </div>
     </Layout>
   );

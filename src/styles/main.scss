@@ -84,11 +84,49 @@ p {
   display: block;
 }
 
-.visibility-block.hidden {
+/* 1. Base state */
+.visibility-block {
   opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
 }
 
-.visibility-block.visible {
-  animation: fadeIn 0.5s ease-out;
-  opacity: 1;
+/* 2. When visible: animation starts */
+.visibility-block.visible:not(.media-visibility-block) {
+  animation: fadeUpSettle 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.visibility-block.visible.media-visibility-block {
+  animation: fadeUpSimple 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* 3. Animations */
+@keyframes fadeUpSettle {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(-2px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpSimple {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

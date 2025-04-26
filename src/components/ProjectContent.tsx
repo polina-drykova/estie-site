@@ -52,8 +52,10 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
 
   return (
     <div className="project-content">
-      {header && <div className='heading'>{header}</div>}
-      {title && <h3>{title}</h3>}
+      <VisibilityBlock>
+        {header && <div className='heading'>{header}</div>}
+        {title && <h3>{title}</h3>}
+      </VisibilityBlock>
       {content && (
         <div className={`project-content-list-wrapper ${index % 2 === 0 ? 'even' : 'odd'}`}>
           {content.map((item, itemIndex) => {
@@ -64,10 +66,10 @@ const ProjectsContent: React.FC<ProjectsContentProps> = ({ title, header, conten
               finalItem = isMobile ? item.mobile : item.desktop;
             }
             const safeItem = finalItem as BaseContentItem;
-
+            const isMedia = !!(safeItem.collage || safeItem.grid || safeItem.video || safeItem.image);
 
             return (
-              <VisibilityBlock key={itemIndex} className="item-wrapper">
+              <VisibilityBlock key={itemIndex} className={`item-wrapper ${isMedia ? 'media-visibility-block' : ''}`}>
                 {typeof safeItem === 'string' ? (
                   <HtmlContentBlock html={safeItem} />
                 ) : safeItem.collage ? (

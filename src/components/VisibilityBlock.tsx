@@ -6,7 +6,7 @@ interface Props {
   threshold?: number; // optional config
 }
 
-const VisibilityBlock: React.FC<Props> = ({ children, className = '', threshold = 0.2 }) => {
+  const VisibilityBlock: React.FC<Props> = ({ children, className = '', threshold = 0.3 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
