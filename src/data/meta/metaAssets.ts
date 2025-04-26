@@ -1,8 +1,6 @@
-// import meta1 from '@/assets/images/meta/meta-1.svg';
-// import meta1Mobile from '@/assets/images/meta/meta-1-mobile.svg';
-// import meta1Tablet from '@/assets/images/meta/meta-1-tablet.svg';
-// import meta2 from '@/assets/images/meta/meta-2.svg';
-// import meta2Mobile from '@/assets/images/meta/meta-2-mobile.svg';
+import meta1 from '@/assets/images/meta/image-1.svg';
+import meta2 from '@/assets/images/meta/image-2.svg';
+import meta2Mobile from '@/assets/images/meta/image-2-mobile.svg';
 import meta3 from '/meta/image-3.svg';
 import meta4 from '@/assets/images/meta/image-4.svg';
 import meta5 from '@/assets/images/meta/image-5.svg';
@@ -37,6 +35,7 @@ import metaVid4 from '@/assets/videos/meta/video-4.mp4';
 import metaVid5 from '@/assets/videos/meta/video-5.mp4';
 import metaVid6 from '@/assets/videos/meta/video-6.mp4';
 import metaVid7 from '@/assets/videos/meta/video-7.mp4';
+import meta30 from '@/assets/images/meta/image-30.svg';
 
 export const metaGridContent = {
   grid: [
@@ -100,13 +99,24 @@ export const metaGridContent = {
 };
 
 export const metaMediaContent = [
-  {}, // 0
-  {}, // 1
+  { index: 0, image: meta1, class: 'audience-network', desktopOnly: true, priority: true },
+  {
+    index: 1,
+    image: {
+      desktop: meta2,
+      tablet: meta2Mobile,
+      mobile: meta2Mobile,
+    },
+    class: "z-index-4",
+    priority: true,
+  },
   {
     index: 2,
     video: [metaVid1],
     description: ["Meta Ad displays  in Candy Crush with new design"],
     priority: true,
+    class: 'candy-crush-video',
+    descriptionClass: 'candy-crush-desc',
   },
   {
     index: 3,
@@ -116,14 +126,15 @@ export const metaMediaContent = [
     class: "media-min-width-260",
     priority: true,
   },
-  { index: 4, image: meta3, class: "vector-image" },
-  metaGridContent, // index: 5,
+  { index: 4, image: meta30, class: "mb-138"},
+  { index: 5, image: meta3, class: "vector-image" },
+  metaGridContent, // index: 6,
   {
-    index: 6,
+    index: 7,
     video: [metaVid4, metaVid5],
   },
   {
-    index: 7,
+    index: 8,
     image: [meta18, meta19, meta20],
     subtitle: ["9:16 Ad on Facebook Feed - iOS", "9:16 before - Android", "9:16 after - Android"],
     description: [
@@ -134,26 +145,26 @@ export const metaMediaContent = [
     shadow: true,
   },
   {
-    index: 8,
+    index: 9,
     image: [meta21, meta22, meta23, meta24],
     description: ["16:9 video ad", "1:1 video ad", "4:5 video ad", "9:16 video ad"],
     shadow: true,
   },
   {
-    index: 9,
+    index: 10,
     image: [meta25],
     description: ["Optimised for 4:5 and 9:16 ratios, with horizontal App Store screenshots."],
     descriptionClass: "offset-top__34",
     class: "standalone-image",
   },
-  { index: 10, video: metaVid6, class: "meta-video-nudge-80" },
+  { index: 11, video: metaVid6, class: "meta-video-nudge-80" },
   {
-    index: 11,
+    index: 12,
     image: [meta26, meta27, meta28, meta29],
     description: ["9:16 ad", "Collapsed card + auto open", "75% browser", "OC end card"],
     shadow: true,
   },
-  { index: 12, video: metaVid7, class: "meta-video-nudge-80" },
+  { index: 13, video: metaVid7, class: "meta-video-nudge-80" },
 ];
 
 export const metaAssetsToPreloadPriority = [

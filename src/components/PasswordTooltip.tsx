@@ -35,7 +35,7 @@ const PasswordTooltip: React.FC<PasswordTooltipProps> = ({ onSuccess, onCancel, 
     };
   }, [onCancel]);
 
-  // Auto-trigger onSuccess after 2 seconds if valid
+  // Auto-trigger onSuccess after 1 second if valid
   useEffect(() => {
     if (isValid) {
       redirectTimerRef.current = setTimeout(() => {
