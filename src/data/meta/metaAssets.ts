@@ -2,32 +2,32 @@ import meta1 from '@/assets/images/meta/image-1.svg';
 import meta2 from '@/assets/images/meta/image-2.svg';
 import meta2Mobile from '@/assets/images/meta/image-2-mobile.svg';
 import meta3 from '/meta/image-3.svg';
-import meta4 from '@/assets/images/meta/image-4.svg';
-import meta5 from '@/assets/images/meta/image-5.svg';
-import meta6 from '@/assets/images/meta/image-6.svg';
-import meta7 from '@/assets/images/meta/image-7.svg';
-import meta8 from '@/assets/images/meta/image-8.svg';
-import meta9 from '@/assets/images/meta/image-9.svg';
-import meta10 from '@/assets/images/meta/image-10.svg';
-import meta11 from '@/assets/images/meta/image-11.svg';
-import meta12 from '@/assets/images/meta/image-12.svg';
-import meta13 from '@/assets/images/meta/image-13.svg';
-import meta14 from '@/assets/images/meta/image-14.svg';
-import meta15 from '@/assets/images/meta/image-15.svg';
-import meta16 from '@/assets/images/meta/image-16.svg';
-import meta17 from '@/assets/images/meta/image-17.svg';
-import meta18 from '@/assets/images/meta/image-18.svg';
-import meta19 from '@/assets/images/meta/image-19.svg';
-import meta20 from '@/assets/images/meta/image-20.svg';
-import meta21 from '@/assets/images/meta/image-21.svg';
-import meta22 from '@/assets/images/meta/image-22.svg';
-import meta23 from '@/assets/images/meta/image-23.svg';
-import meta24 from '@/assets/images/meta/image-24.svg';
-import meta25 from '@/assets/images/meta/image-25.svg';
-import meta26 from '@/assets/images/meta/image-26.svg';
-import meta27 from '@/assets/images/meta/image-27.svg';
-import meta28 from '@/assets/images/meta/image-28.svg';
-import meta29 from '@/assets/images/meta/image-29.svg';
+import meta4 from '@/assets/images/meta/image-4.svg?raw';
+import meta5 from '@/assets/images/meta/image-5.svg?raw';
+import meta6 from '@/assets/images/meta/image-6.svg?raw';
+import meta7 from '@/assets/images/meta/image-7.svg?raw';
+import meta8 from '@/assets/images/meta/image-8.svg?raw';
+import meta9 from '@/assets/images/meta/image-9.svg?raw';
+import meta10 from '@/assets/images/meta/image-10.svg?raw';
+import meta11 from '@/assets/images/meta/image-11.svg?raw';
+import meta12 from '@/assets/images/meta/image-12.svg?raw';
+import meta13 from '@/assets/images/meta/image-13.svg?raw';
+import meta14 from '@/assets/images/meta/image-14.svg?raw';
+import meta15 from '@/assets/images/meta/image-15.svg?raw';
+import meta16 from '@/assets/images/meta/image-16.svg?raw';
+import meta17 from '@/assets/images/meta/image-17.svg?raw';
+import meta18 from '@/assets/images/meta/image-18.png';
+import meta19 from '@/assets/images/meta/image-19.png';
+import meta20 from '@/assets/images/meta/image-20.png';
+import meta21 from '@/assets/images/meta/image-21.png';
+import meta22 from '@/assets/images/meta/image-22.png';
+import meta23 from '@/assets/images/meta/image-23.png';
+import meta24 from '@/assets/images/meta/image-24.png';
+import meta25 from '@/assets/images/meta/image-25.png';
+import meta26 from '@/assets/images/meta/image-26.png';
+import meta27 from '@/assets/images/meta/image-27.png';
+import meta28 from '@/assets/images/meta/image-28.png';
+import meta29 from '@/assets/images/meta/image-29.png';
 import metaVid1 from '/meta/video-1.mp4';
 import metaVid2 from '/meta/video-2.mp4';
 import metaVid3 from '/meta/video-3.mp4';
@@ -143,12 +143,14 @@ export const metaMediaContent = [
       "After: a focused experience, giving users time to recognise the brand then focus in digesting the ad media",
     ],
     shadow: true,
+    class: "png-group",
   },
   {
     index: 9,
     image: [meta21, meta22, meta23, meta24],
     description: ["16:9 video ad", "1:1 video ad", "4:5 video ad", "9:16 video ad"],
     shadow: true,
+    class: "png-group-2",
   },
   {
     index: 10,

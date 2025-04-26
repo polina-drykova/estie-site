@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import LazyImage from '../LazyImage';
 import '../../styles/SimpleImageGrid.scss';
+import InlineSVG from '../InlineSVG';
 
 type ImageItem = {
   src: string | { desktop: string; tablet: string; mobile: string };
@@ -35,7 +36,7 @@ const SimpleImageGrid = ({ images }: { images: ImageItem[] }) => {
       {/* Full rows without empty slots */}
       {fullRows.map((item, index) => (
         <div className="simple-image-grid-item" key={`full-${index}`}>
-          <LazyImage src={item.src} alt="Grid Image" />
+          <InlineSVG src={item.src} alt="Grid Image" />
           <div className="simple-image-grid-description">{item.description}</div>
         </div>
       ))}
@@ -48,7 +49,7 @@ const SimpleImageGrid = ({ images }: { images: ImageItem[] }) => {
 
       {lastRow.map((item, index) => (
         <div className="simple-image-grid-item" key={`last-${index}`}>
-          <LazyImage src={item.src} alt="Grid Image" />
+          <InlineSVG src={item.src} alt="Grid Image" />
           <div className="simple-image-grid-description">{item.description}</div>
         </div>
       ))}

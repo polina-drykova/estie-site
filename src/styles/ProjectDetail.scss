@@ -78,6 +78,7 @@
   .flurry-msg {
     margin-left: auto;
     margin-top: 54px;
+    height: 36px;
   }
   .item-last {
     margin-bottom: 60px;
@@ -104,6 +105,7 @@
       img {
         position: relative;
         left: 39%;
+        height: 520px;
         @media (min-width: 768px) {
           left: unset;
         }
@@ -447,4 +449,16 @@ mb-138
 }
 .mb-138 {
   margin-bottom: 138px;
+}
+img.png-group {
+  height: 606px;
+}
+img.png-group-2 {
+  width: 280px;
+}
+img.image-300 {
+  width: 300px;
+}
+img.image-290 {
+  width: 290px;
 }

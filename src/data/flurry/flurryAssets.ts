@@ -1,20 +1,20 @@
-import flurry1 from '/flurry/flurry-1.svg';
+import flurry1 from '/flurry/flurry-1.png';
 import flurry1Mobile from '/flurry/flurry-1-mobile.svg';
 import flurry1Tablet from '/flurry/flurry-1-tablet.svg';
-import flurry2 from '/flurry/flurry-2.svg';
+import flurry2 from '/flurry/flurry-2.png';
 import flurry2Mobile from '/flurry/flurry-2-mobile.svg';
-import flurry3 from '/flurry/flurry-3.svg';
+import flurry3 from '/flurry/flurry-3.png';
 import flurry3Mobile from '/flurry/flurry-3-mobile.svg';
-import flurry4 from '/flurry/flurry-4.svg';
-import flurry5 from '@/assets/images/flurry/flurry-5.svg';
+import flurry4 from '/flurry/flurry-4.png';
+import flurry5 from '@/assets/images/flurry/flurry-5.png';
 import flurry6 from '@/assets/images/flurry/flurry-6.png';
 import flurry6Mobile from '@/assets/images/flurry/flurry-6-mobile.png';
 import flurryPromo from '/flurry/flurry_promo.mp4';
 import flurryV3 from '@/assets/videos/flurry/fluffy_3.0.mp4';
-import flurry7 from '@/assets/images/flurry/flurry-7.svg';
-import flurry8 from '@/assets/images/flurry/flurry-8.svg';
-import flurry9 from '@/assets/images/flurry/flurry-9.svg';
-import flurry10 from '@/assets/images/flurry/flurry-10.svg';
+import flurry7 from '@/assets/images/flurry/flurry-7.png';
+import flurry8 from '@/assets/images/flurry/flurry-8.png';
+import flurry9 from '@/assets/images/flurry/flurry-9.png';
+import flurry10 from '@/assets/images/flurry/flurry-10.png';
 import flurryVid1 from '@/assets/videos/flurry/flurry-vid-1.mp4';
 import flurryVid2 from '@/assets/videos/flurry/flurry-vid-2.mp4';
 import flurryVid3 from '@/assets/videos/flurry/flurry-vid-3.mp4';
@@ -55,7 +55,7 @@ export const flurryMediaContent = [
     class: "image-large",
     priority: true,
   },
-  { image: flurry4, shadow: true },
+  { image: flurry4, shadow: true, class: "image-300" },
   { video: flurryPromo, class: "video-large" },
   {
     video: [flurryVid1, flurryVid2, flurryVid3, flurryVid4, flurryVid5],
@@ -72,7 +72,7 @@ export const flurryMediaContent = [
     },
     class: "image-huge" },
   { video: flurryV3, class: "video-medium" },
-  { image: [flurry7, flurry8, flurry9, flurry10], shadow: true },
+  { image: [flurry7, flurry8, flurry9, flurry10], shadow: true, class: "image-290" },
 ];
 
 export const flurryCollageContent = {
